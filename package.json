@@ -1,0 +1,26 @@
+{
+  "name": "primeng-class-changes-detector",
+  "version": "1.0.0",
+  "description": "initial script for detecting class name changes in primeng v17->19",
+  "main": "ai_script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "track-ai": "sudo node track_changes_ai.js /Users/cutternaismith/Documents/GitHub/primeng --use-ai",
+    "pre-gen-log": "sudo node pre_gen_log.js --log-file /path/to/logfile.log",
+    "track": "node track_changes.js /Users/cutternaismith/Documents/GitHub/primeng"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xbaldr/primeng-class-changes-detector.git"
+  },
+  "author": "cutterjam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xbaldr/primeng-class-changes-detector/issues"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "openai": "^4.85.3",
+    "yargs": "^17.7.2"
+  }
+}

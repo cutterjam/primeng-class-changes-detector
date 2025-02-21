@@ -1,0 +1,201 @@
+PrimeNG Changes for p-megamenu-submenu (v17-v19)
+============================
+
+-------------------
+Commit: 4ad9c5c6a
+Date: 2023-07-11 15:23:50 +0300
+Message: MegaMenu | Accessibility enhancements
+File: src/app/components/megamenu/megamenu.ts
+
+Class Changes:
+-        <div [class]="styleClass" [ngStyle]="style" [ngClass]="{ 'p-megamenu p-component': true, 'p-megamenu-horizontal': orientation == 'horizontal', 'p-megamenu-vertical': orientation == 'vertical' }">
+-                    <li *ngIf="category.separator" class="p-menu-separator" [ngClass]="{ 'p-hidden': category.visible === false }"></li>
+
+Removed: [ngClass]="{ 'p-menuitem': true, 'p-menuitem-active': category == activeItem, 'p-hidden': category.visible === false }"
+Added:   [ngClass]="{ 'p-megamenu-root-list': root, 'p-submenu-list p-megamenu-submenu': !root}"
++            <li *ngIf="submenu" [ngClass]="getSubmenuHeaderClass(submenu)" [style]="getItemProp(submenu, 'style')" role="presentation">{{ getItemLabel(submenu) }}</li>
++                <li *ngIf="isItemVisible(processedItem) && getItemProp(processedItem, 'separator')" [id]="getItemId(processedItem)" [style]="getItemProp(processedItem, 'style')" [ngClass]="getSeparatorItemClass(processedItem)" role="separator" [attr.data-pc-section]="'separator'"></li>
++                    [ngClass]="getItemClass(processedItem)"
+-                            [ngClass]="{ 'p-menuitem-link': true, 'p-disabled': category.disabled }"
+-                            <span class="p-menuitem-icon" *ngIf="category.icon" [ngClass]="category.icon"></span>
+
+Removed: <span class="p-menuitem-badge" *ngIf="category.badge" [ngClass]="category.badgeStyleClass">{{ category.badge }}</span>
+Added:   [ngClass]="{ 'p-menuitem-link': true, 'p-disabled': getItemProp(processedItem, 'disabled') }"
++                            <span *ngIf="getItemProp(processedItem, 'icon')" class="p-menuitem-icon" [ngClass]="getItemProp(processedItem, 'icon')" [ngStyle]="getItemProp(processedItem, 'iconStyle')" [attr.data-pc-section]="'icon'" [attr.aria-hidden]="true" [attr.tabindex]="-1"> </span>
++                            <span class="p-menuitem-badge" *ngIf="getItemProp(processedItem, 'badge')" [ngClass]="getItemProp(processedItem, 'badgeStyleClass')">{{ child.badge }}</span>
+-                            [ngClass]="{ 'p-menuitem-link': true, 'p-disabled': category.disabled }"
+-                            <span class="p-menuitem-icon" *ngIf="category.icon" [ngClass]="category.icon"></span>
+
+Removed: <span class="p-menuitem-badge" *ngIf="category.badge" [ngClass]="category.badgeStyleClass">{{ category.badge }}</span>
+Added:   [ngClass]="{ 'p-menuitem-link': true, 'p-disabled': getItemProp(processedItem, 'disabled') }"
++                            <span class="p-menuitem-icon" *ngIf="getItemProp(processedItem, 'icon')" [ngClass]="getItemProp(processedItem, 'icon')" [ngStyle]="getItemProp(processedItem, 'iconStyle')" [attr.data-pc-section]="'icon'" [attr.aria-hidden]="true" [attr.tabindex]="-1"></span>
++                            <span class="p-menuitem-badge" *ngIf="getItemProp(processedItem, 'badge')" [ngClass]="getItemProp(processedItem, 'badgeStyleClass')">{{ getItemProp(processedItem, 'badge') }}</span>
+-                                            <ul class="p-megamenu-submenu" role="menu">
+-                                                <li class="p-megamenu-submenu-header">
+-                                                    <span class="p-menuitem-badge" *ngIf="submenu.badge" [ngClass]="submenu.badgeStyleClass">{{ submenu.badge }}</span>
+-                                                    <li *ngIf="item.separator" class="p-menu-separator" [ngClass]="{ 'p-hidden': item.visible === false }" role="separator"></li>
+-                                                    <li *ngIf="!item.separator" class="p-menuitem" [ngClass]="{ 'p-hidden': item.visible === false }" role="none" pTooltip [tooltipOptions]="item.tooltipOptions">
+-                                                            [ngClass]="{ 'p-disabled': item.disabled }"
+-                                                            <span class="p-menuitem-icon" *ngIf="item.icon" [ngClass]="item.icon" [ngStyle]="item.iconStyle"></span>
+-                                                            <span class="p-menuitem-badge" *ngIf="item.badge" [ngClass]="item.badgeStyleClass">{{ item.badge }}</span>
+-                                                            [ngClass]="{ 'p-disabled': item.disabled }"
+-                                                            <span class="p-menuitem-icon" *ngIf="item.icon" [ngClass]="item.icon" [ngStyle]="item.iconStyle"></span>
+
+Removed: <span class="p-menuitem-badge" *ngIf="item.badge" [ngClass]="item.badgeStyleClass">{{ item.badge }}</span>
+Added:   <div *ngFor="let col of processedItem.items" [ngClass]="getColumnClass(processedItem)">
++            'p-megamenu-submenu-header p-submenu-header': true,
++            [ngClass]="{ 'p-megamenu p-component': true, 'p-megamenu-horizontal': orientation == 'horizontal', 'p-megamenu-vertical': orientation == 'vertical' }"
+
+AI Analysis:
+The code diff reveals several changes to the class names used in the `ngClass` expressions. Here are the identified changes:
+
+1. **Root and Submenu Classes**:
+   - The previous classes applied to the outer `ngClass` expression:
+     ```typescript
+     [ngClass]="{ 'p-megamenu p-component': true, 'p-megamenu-horizontal': orientation == 'horizontal', 'p-megamenu-vertical': orientation == 'vertical' }"
+     ```
+     has been modified to:
+     ```typescript
+     [ngClass]="{ 'p-megamenu-root-list': root, 'p-submenu-list p-megamenu-submenu': !root}"
+     ```
+   - This change renames the classes from `p-megamenu` and its variants to `p-megamenu-root-list` for the root condition and `p-submenu-list p-megamenu-submenu` for the non-root condition.
+
+2. **Menu Item Classes**:
+   - The class name for the menu item has changed from:
+     ```typescript
+     [ngClass]="{ 'p-menuitem': true, 'p-menuitem-active': category == activeItem, 'p-hidden': category.visible === false }"
+     ```
+     to:
+     ```typescript
+     [ngClass]="getItemClass(processedItem)"
+     ```
+   - The new code utilizes a method `getItemClass(processedItem)`, indicating a dynamic change in the way classes are assigned based on the properties of `processedItem`.
+
+3. **Separator and Item Classes**:
+   - The classes for the separator item have transitioned from:
+     ```typescript
+     [ngClass]="{ 'p-hidden': item.visible === false }"
+     ```
+     to:
+     ```typescript
+     [ngClass]="getSeparatorItemClass(processedItem)"
+     ```
+   - Similar to the menu item class, this change suggests the use of a method to handle class assignments dynamically.
+
+4. **Badge Classes**:
+   - The badge `ngClass` expressions have been modified from:
+     ```typescript
+     [ngClass]="category.badgeStyleClass"
+     ```
+     to:
+     ```typescript
+     [ngClass]="getItemProp(processedItem, 'badgeStyleClass')"
+     ```
+   - This indicates a shift to using a property retrieval method compared to directly accessing the `category`.
+
+5. **Submenu Header Class**:
+   - The submenu header class now uses a method:
+     ```typescript
+     [ngClass]="getSubmenuHeaderClass(submenu)"
+     ```
+   - This contrasts with simply applying the class directly from properties.
+
+Overall, these changes reflect a shift towards a more dynamic approach for class assignments in Angular templates, enhancing maintainability and reusability through function calls for class generation instead of static class names.
+
+-------------------
+Commit: 6cf27431c
+Date: 2020-09-30 17:04:38 +0300
+Message: Fixed #4370 - Html support for Menu Components
+File: src/app/components/megamenu/megamenu.ts
+
+Class Changes:
+
+Removed: <li class="p-megamenu-submenu-header">{{submenu.label}}</li>
+Added:   <li class="p-megamenu-submenu-header">
+
+AI Analysis:
+There are no changes to class names in the provided code diff. The `li` element retains the same class name `p-megamenu-submenu-header` in both versions. The change appears to be the removal of the interpolation (`{{submenu.label}}`) that displayed the submenu label, but no changes were made to the class names, including in any `ngClass` expressions.
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+File: src/app/components/megamenu/megamenu.ts
+
+Class Changes:
+
+Removed: [ngClass]="{'ui-megamenu ui-widget ui-widget-content ui-corner-all':true,'ui-megamenu-horizontal': orientation == 'horizontal','ui-megamenu-vertical': orientation == 'vertical'}">
+Added:   [ngClass]="{'p-megamenu p-component':true,'p-megamenu-horizontal': orientation == 'horizontal','p-megamenu-vertical': orientation == 'vertical'}">
+-                    <li *ngIf="category.separator" class="ui-menu-separator ui-widget-content" [ngClass]="{'ui-helper-hidden': category.visible === false}">
+
+Removed: <li *ngIf="!category.separator" #item [ngClass]="{'ui-menuitem ui-corner-all':true,'ui-menuitem-active':item==activeItem, 'ui-helper-hidden': category.visible === false}"
+Added:   <li *ngIf="category.separator" class="p-menu-separator" [ngClass]="{'p-hidden': category.visible === false}">
++                    <li *ngIf="!category.separator" #item [ngClass]="{'p-menuitem':true,'p-menuitem-active':item==activeItem, 'p-hidden': category.visible === false}"
+-                            [ngClass]="{'ui-menuitem-link ui-corner-all':true,'ui-state-disabled':category.disabled}" [ngStyle]="category.style" [class]="category.styleClass">
+-                            <span class="ui-menuitem-icon" *ngIf="category.icon" [ngClass]="category.icon"></span>
+
+Removed: <span *ngIf="category.items" class="ui-submenu-icon pi pi-fw" [ngClass]="{'pi-caret-down':orientation=='horizontal','pi-caret-right':orientation=='vertical'}"></span>
+Added:   [ngClass]="{'p-menuitem-link':true,'p-disabled':category.disabled}" [ngStyle]="category.style" [class]="category.styleClass">
++                            <span class="p-menuitem-icon" *ngIf="category.icon" [ngClass]="category.icon"></span>
++                            <span *ngIf="category.items" class="p-submenu-icon pi" [ngClass]="{'pi-angle-down':orientation=='horizontal','pi-angle-right':orientation=='vertical'}"></span>
+
+Removed: (click)="itemClick($event, category)" [ngClass]="{'ui-menuitem-link ui-corner-all':true,'ui-state-disabled':category.disabled}" [ngStyle]="category.style" [class]="category.styleClass"
+Added:   (click)="itemClick($event, category)" [ngClass]="{'p-menuitem-link':true,'p-disabled':category.disabled}" [ngStyle]="category.style" [class]="category.styleClass"
+
+Removed: <span class="ui-menuitem-icon" *ngIf="category.icon" [ngClass]="category.icon"></span>
+Added:   <span class="p-menuitem-icon" *ngIf="category.icon" [ngClass]="category.icon"></span>
++                                            <ul class="p-megamenu-submenu" role="menu">
++                                                <li class="p-megamenu-submenu-header">{{submenu.label}}</li>
+-                                                    <li *ngIf="item.separator" class="ui-menu-separator ui-widget-content" [ngClass]="{'ui-helper-hidden': item.visible === false}" role="separator">
+-                                                    <li *ngIf="!item.separator" class="ui-menuitem ui-corner-all" [ngClass]="{'ui-helper-hidden': item.visible === false}" role="none">
+-                                                            [ngClass]="{'ui-state-disabled':item.disabled}" (click)="itemClick($event, item)">
+
+Removed: <span class="ui-menuitem-icon" *ngIf="item.icon" [ngClass]="item.icon"></span>
+Added:   <li *ngIf="item.separator" class="p-menu-separator" [ngClass]="{'p-hidden': item.visible === false}" role="separator">
++                                                    <li *ngIf="!item.separator" class="p-menuitem" [ngClass]="{'p-hidden': item.visible === false}" role="none">
++                                                            [ngClass]="{'p-disabled':item.disabled}" (click)="itemClick($event, item)">
++                                                            <span class="p-menuitem-icon" *ngIf="item.icon" [ngClass]="item.icon"></span>
+
+Removed: [ngClass]="{'ui-state-disabled':item.disabled}" (click)="itemClick($event, item)"
+Added:   [ngClass]="{'p-disabled':item.disabled}" (click)="itemClick($event, item)"
+
+Removed: <span class="ui-menuitem-icon" *ngIf="item.icon" [ngClass]="item.icon"></span>
+Added:   <span class="p-menuitem-icon" *ngIf="item.icon" [ngClass]="item.icon"></span>
+
+AI Analysis:
+The code diff shows several changes to class names, particularly in the `ngClass` expressions. Key changes are as follows:
+
+1. **Top Level Megamenu Changes:**
+   - The previous classes (`ui-megamenu`, `ui-widget`, `ui-widget-content`, `ui-corner-all`) have been replaced with:
+     - `p-megamenu` and `p-component`.
+
+2. **Separator List Item:**
+   - The class `ui-menu-separator ui-widget-content` has been changed to `p-menu-separator`.
+
+3. **Non-separator List Item:**
+   - The classes in `ngClass` updated from:
+     - `{'ui-menuitem ui-corner-all':true, 'ui-menuitem-active':item==activeItem, 'ui-helper-hidden': category.visible === false}`
+   - to:
+     - `{'p-menuitem':true, 'p-menuitem-active':item==activeItem, 'p-hidden': category.visible === false}`.
+
+4. **Menu Item Link Classes:**
+   - The classes changed from:
+     - `{'ui-menuitem-link ui-corner-all':true, 'ui-state-disabled': category.disabled}`
+   - to:
+     - `{'p-menuitem-link':true, 'p-disabled': category.disabled}`.
+
+5. **Icons:**
+   - The classes for icons have been updated:
+     - `ui-menuitem-icon` is now `p-menuitem-icon`.
+   - Additionally, the submenu icon has changed from:
+     - `{'pi-caret-down': orientation=='horizontal', 'pi-caret-right': orientation=='vertical'}`
+   - to:
+     - `{'pi-angle-down': orientation=='horizontal', 'pi-angle-right': orientation=='vertical'}`.
+
+6. **Submenu and Item Conditional Items:**
+   - Similar changes take place in nested items with:
+     - Separators: changed from `ui-menu-separator ui-widget-content` to `p-menu-separator`.
+     - Non-separators: changed from `ui-menuitem` to `p-menuitem`.
+
+Overall, the changes indicate a shift from a set of `ui-` prefixed classes to `p-` prefixed classes, suggesting a potential update or rebranding of the component library being used.
+

@@ -1,0 +1,51 @@
+PrimeNG Changes for p-menubar-button (v17-v19)
+============================
+
+-------------------
+Commit: bddeceb83
+Date: 2023-07-26 12:22:24 +0300
+Message: Code format
+
+Class Changes:
+
+Removed: class="p-menubar-button"
+Added:   class="p-menubar-button"
+
+-------------------
+Commit: 2b5b33361
+Date: 2023-07-05 04:16:40 +0300
+Message: Accessibility | Menubar
+
+Class Changes:
+
+Removed: <a #menubutton tabindex="0" *ngIf="model && model.length > 0" class="p-menubar-button" (click)="toggle($event)">
+Added:   class="p-menubar-button"
+
+-------------------
+Commit: 02b694b86
+Date: 2022-11-09 10:08:22 +0300
+Message: Refactor on menubar
+
+Class Changes:
+
+Removed: <a #menubutton tabindex="0" *ngIf="model.length > 0" class="p-menubar-button" (click)="toggle($event)">
+Added:   <a #menubutton tabindex="0" *ngIf="model && model.length > 0" class="p-menubar-button" (click)="toggle($event)">
+
+-------------------
+Commit: 3384b9f38
+Date: 2022-11-02 17:40:14 +0300
+Message: #12084 Menu icon visible
+
+Class Changes:
+
+Removed: <a #menubutton tabindex="0" class="p-menubar-button" (click)="toggle($event)">
+Added:   <a #menubutton tabindex="0" *ngIf="model.length > 0" class="p-menubar-button" (click)="toggle($event)">
+
+-------------------
+Commit: 3642a0b89
+Date: 2020-08-14 12:24:14 +0300
+Message: Fixed #9127 - Menubar not working on mobile devices
+
+Class Changes:
++            <a #menubutton tabindex="0" class="p-menubar-button" (click)="toggle($event)">
+
