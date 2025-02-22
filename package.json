@@ -5,9 +5,9 @@
   "main": "ai_script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "track-ai": "sudo node track_changes_ai.js /Users/cutternaismith/Documents/GitHub/primeng --use-ai",
-    "pre-gen-log": "sudo node pre_gen_log.js --log-file /path/to/logfile.log",
-    "track": "node track_changes.js /Users/cutternaismith/Documents/GitHub/primeng"
+    "track-ai": "sudo node scripts/track_changes_ai.js /Users/cutternaismith/Documents/GitHub/primeng --use-ai",
+    "pre-gen-log": "sudo node scripts/pre_gen_log.js --log-file /path/to/logfile.log",
+    "track": "node scripts/track_changes.js /Users/cutternaismith/Documents/GitHub/primeng"
   },
   "repository": {
     "type": "git",

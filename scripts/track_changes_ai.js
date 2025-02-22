@@ -24,7 +24,9 @@ const argv = yargs(hideBin(process.argv))
         type: 'array',
         description: 'List of class names to search for',
         default: [
-            'p-megamenu-submenu'
+            'p-menuitem-link',
+            'p-menuitem-text',
+            'p-menuitem'
         ]
     })
     .option('use-ai', {
