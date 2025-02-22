@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xbaldr/primeng-class-changes-detector.git"
+    "url": "git+https://github.com/cutterjam/primeng-class-changes-detector.git"
   },
   "author": "cutterjam",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xbaldr/primeng-class-changes-detector/issues"
+    "url": "https://github.com/cutterjam/primeng-class-changes-detector/issues"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
