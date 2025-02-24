@@ -1,0 +1,806 @@
+PrimeNG Changes for p-submenu-list (v17-v19)
+============================
+
+-------------------
+Commit: 390f781ef
+Date: 2024-11-20 13:15:31 +0000
+Message: Remove tests
+
+Class Changes:
+File: /dev/null
+
+Removed: const firstSubmenuList = fixture.debugElement.query(By.css('.p-submenu-list'));
+
+-------------------
+Commit: f6fd1a56d
+Date: 2024-07-31 11:29:34 +0300
+Message: Theming | Add contextmenu
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: [ngClass]="{ 'p-submenu-list': !root, 'p-contextmenu-root-list': root }"
+
+-------------------
+Commit: 4655090a5
+Date: 2024-07-30 11:51:36 +0300
+Message: Fix panelMenu animation
+
+Class Changes:
+File: src/app/components/panelmenu/style/panelmenustyle.ts
+
+Removed: .p-panelmenu .p-submenu-list {
+
+-------------------
+Commit: c9e61f303
+Date: 2024-07-23 11:30:10 +0300
+Message: remove tieredmenu.css
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-tieredmenu .p-submenu-list {
+
+Removed: .p-tieredmenu .p-menuitem-active > p-tieredmenusub > .p-submenu-list {
+
+Removed: .p-tieredmenu .p-menuitem-active > p-tieredmenusub > .p-submenu-list.p-submenu-list-flipped {
+
+-------------------
+Commit: 6f5138116
+Date: 2024-07-23 11:29:33 +0300
+Message: Theming | MegaMenu
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.ts
+
+Removed: [ngClass]="{ 'p-megamenu-root-list': root, 'p-submenu-list p-megamenu-submenu': !root }"
+
+-------------------
+Commit: 1b44914e5
+Date: 2024-07-23 11:04:07 +0300
+Message: Theming | TieredMenu
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.ts
+
+Removed: [ngClass]="{ 'p-submenu-list': !root, 'p-tieredmenu-root-list': root }"
+
+-------------------
+Commit: b891fd348
+Date: 2024-07-22 17:20:50 +0300
+Message: Theming | PanelMenu
+
+Class Changes:
+File: /dev/null
+
+Potential Class Replacements:
+Removed: p-submenu-icon
+Added:   p-submenu-expanded
+Similarity: 67%
+
+Removed: .p-panelmenu .p-submenu-list {
+
+Removed: [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root }"
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-icon-wrapper {
+
+Removed: [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }"
+
+-------------------
+Commit: 45f4fb68c
+Date: 2024-07-17 17:07:04 +0300
+Message: Remove SlideMenu, fixes #16044
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-slidemenu .p-submenu-list {
+
+Removed: .p-slidemenu .p-menuitem-active > p-slidemenusub > .p-submenu-list {
+
+Removed: .p-slidemenu .p-menuitem-active > .p-menuitem-content > .p-submenu > .p-submenu-list {
+
+Removed: .p-slidemenu .p-active-submenu > .p-menuitem-active > .p-menuitem-content > .p-submenu > .p-submenu-list {
+
+Removed: expect(subMenu.nativeElement.className).not.toContain('p-submenu-list p-active-submenu');
+
+Removed: [ngClass]="{ 'p-submenu-list': !root, 'p-slidemenu-root-list': root, 'p-active-submenu': isActive }"
+
+-------------------
+Commit: 5e54a2521
+Date: 2024-04-30 17:57:14 +0100
+Message: fix unit test for menubar and progressbar component
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Removed: const firstSubmenuList = fixture.debugElement.query(By.css('.p-submenu-list'));
+
+-------------------
+Commit: bddeceb83
+Date: 2023-07-26 12:22:24 +0300
+Message: Code format
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.ts
+
+Removed: [ngClass]="{ 'p-megamenu-root-list': root, 'p-submenu-list p-megamenu-submenu': !root}"
+Added:   [ngClass]="{ 'p-megamenu-root-list': root, 'p-submenu-list p-megamenu-submenu': !root }"
+
+Removed: [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }"
+
+Removed: [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root}"
+Added:   [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root }"
+
+-------------------
+Commit: e7c75b00f
+Date: 2023-07-26 12:21:25 +0300
+Message: remove test components
+
+Class Changes:
+File: /dev/null
+
+Removed: [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root}"
+
+-------------------
+Commit: 373d8fed6
+Date: 2023-07-26 12:21:04 +0300
+Message: PanelMenu | Add accessibility enhancements
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Potential Class Replacements:
+Removed: p-submenu-expanded
+Added:   p-submenu-icon
+Similarity: 67%
+
+Removed: [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root, 'p-submenu-expanded': expanded }"
+Added:   [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root}"
+
+-------------------
+Commit: 5ccf3e223
+Date: 2023-07-24 21:11:10 +0300
+Message: PanelMenu | New structure
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu_sub.ts
+
+Added:   [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root}"
+
+-------------------
+Commit: 928148200
+Date: 2023-07-20 12:27:14 +0100
+Message: Update panelmenu.ts
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-list': root, 'p-submenu-expanded': expanded }"
+
+-------------------
+Commit: 2b5b33361
+Date: 2023-07-05 04:16:40 +0300
+Message: Accessibility | Menubar
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <ul [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }" [attr.role]="root ? 'menubar' : 'menu'">
+Added:   [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }"
+
+-------------------
+Commit: 6e3fad5a4
+Date: 2023-04-18 22:54:12 +0300
+Message: add missing margin
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-icon-wrapper {
+
+-------------------
+Commit: 1d1c5d0e8
+Date: 2023-01-27 11:30:38 +0300
+Message: Add nano
+
+Class Changes:
+File: src/assets/components/themes/nano/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem:last-child {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: 7a5429800
+Date: 2023-01-27 11:30:09 +0300
+Message: Add mira
+
+Class Changes:
+File: src/assets/components/themes/mira/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem:last-child {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: 2fd964fa3
+Date: 2023-01-27 11:24:46 +0300
+Message: add viva dark
+
+Class Changes:
+File: src/assets/components/themes/viva-dark/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem:last-child {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: 034908058
+Date: 2023-01-27 11:24:00 +0300
+Message: Add viva light
+
+Class Changes:
+File: src/assets/components/themes/viva-light/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem:last-child {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: 17a83c00d
+Date: 2023-01-27 11:23:44 +0300
+Message: Add soho dark
+
+Class Changes:
+File: src/assets/components/themes/soho-dark/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem:last-child {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: d5bef9a01
+Date: 2023-01-27 11:22:55 +0300
+Message: Add soho light
+
+Class Changes:
+File: src/assets/components/themes/soho-light/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem:last-child {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: 620d2a812
+Date: 2023-01-26 14:03:24 +0300
+Message: code format
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root, 'p-submenu-expanded': expanded}" [@submenu]="getAnimation()" role="tree">
+Added:   <ul [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-submenu': root, 'p-submenu-expanded': expanded }" [@submenu]="getAnimation()" role="tree">
+
+-------------------
+Commit: fb5586646
+Date: 2022-11-08 17:19:01 +0300
+Message: Merge master into issue-11902
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Potential Class Replacements:
+Removed: p-submenu-icon
+Added:   p-submenu-expanded
+Similarity: 67%
+
+Removed: p-submenu-expanded
+Added:   p-submenu-icon
+Similarity: 67%
+
+Removed: <ul #sublist [ngClass]="{'p-submenu-list':!root}">
+Added:   <ul #sublist [ngClass]="{ 'p-submenu-list': !root }">
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}" [attr.role]="root ? 'menubar' : 'menu'">
+Added:   <ul [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }" [attr.role]="root ? 'menubar' : 'menu'">
+
+Removed: <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root, 'p-submenu-expanded': expanded}" [@submenu]="expanded ? {value: 'visible', params: {transitionParams: transitionOptions, height: '*'}} : {value: 'hidden', params: {transitionParams: transitionOptions, height: '0'}}" role="tree">
+Added:   [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-submenu': root, 'p-submenu-expanded': expanded }"
+
+Removed: <ul #sublist [ngClass]="{'p-slidemenu-rootlist':root, 'p-submenu-list':!root, 'p-active-submenu': isActive}"
+Added:   [ngClass]="{ 'p-slidemenu-rootlist': root, 'p-submenu-list': !root, 'p-active-submenu': isActive }"
+
+Removed: <ul #sublist [ngClass]="{'p-submenu-list': !root}">
+
+-------------------
+Commit: 996150b2c
+Date: 2022-10-21 12:02:45 +0100
+Message: Update all files
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Potential Class Replacements:
+Removed: p-submenu-icon
+Added:   p-submenu-expanded
+Similarity: 67%
+
+Removed: p-submenu-expanded
+Added:   p-submenu-icon
+Similarity: 67%
+
+Removed: <ul #sublist [ngClass]="{'p-submenu-list':!root}">
+Added:   <ul #sublist [ngClass]="{ 'p-submenu-list': !root }">
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}" [attr.role]="root ? 'menubar' : 'menu'">
+Added:   <ul [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }" [attr.role]="root ? 'menubar' : 'menu'">
+
+Removed: <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root, 'p-submenu-expanded': expanded}" [@submenu]="expanded ? {value: 'visible', params: {transitionParams: transitionOptions, height: '*'}} : {value: 'hidden', params: {transitionParams: transitionOptions, height: '0'}}" role="tree">
+Added:   [ngClass]="{ 'p-submenu-list': true, 'p-panelmenu-root-submenu': root, 'p-submenu-expanded': expanded }"
+
+Removed: <ul #sublist [ngClass]="{'p-slidemenu-rootlist':root, 'p-submenu-list':!root, 'p-active-submenu': isActive}"
+Added:   [ngClass]="{ 'p-slidemenu-rootlist': root, 'p-submenu-list': !root, 'p-active-submenu': isActive }"
+
+Removed: <ul #sublist [ngClass]="{'p-submenu-list': !root}">
+
+-------------------
+Commit: f849e9d23
+Date: 2022-06-28 15:04:34 +0300
+Message: Fixed #11617 - PrimeNG component animation trigger warnings since updating Angular to 14.x
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.css
+
+Added:   .p-panelmenu .p-submenu-list {
+
+Removed: <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root}" [@submenu]="expanded ? {value: 'visible', params: {transitionParams: transitionOptions, height: '*'}} : {value: 'hidden', params: {transitionParams: transitionOptions, height: '0'}}" role="tree">
+Added:   <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root, 'p-submenu-expanded': expanded}" [@submenu]="expanded ? {value: 'visible', params: {transitionParams: transitionOptions, height: '*'}} : {value: 'hidden', params: {transitionParams: transitionOptions, height: '0'}}" role="tree">
+
+-------------------
+Commit: 68caf6509
+Date: 2022-03-31 14:59:49 +0530
+Message: Resolved issue 10963 in panel menu
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root}" [@submenu]="expanded ? {value: 'visible', params: {transitionParams: transitionOptions, height: '*'}} : {value: 'hidden', params: {transitionParams: transitionOptions, height: '0'}}" role="tree">
+Added:   <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root}" [@submenu]="getAnimation()" role="tree">
+
+-------------------
+Commit: 9a96d87f0
+Date: 2022-03-16 14:16:47 +0300
+Message: Fixed #11276 - TieredMenu | responsive is not correct
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.css
+
+Added:   .p-tieredmenu .p-menuitem-active > p-tieredmenusub > .p-submenu-list.p-submenu-list-flipped {
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root}">
+Added:   <ul #sublist [ngClass]="{'p-submenu-list': !root}">
+
+-------------------
+Commit: 8f43723d8
+Date: 2021-10-27 10:20:13 +0300
+Message: Fixed #10781 - SlideMenu | Keyboard Support
+
+Class Changes:
+File: src/app/components/slidemenu/slidemenu.ts
+
+Removed: <ul [ngClass]="{'p-slidemenu-rootlist':root, 'p-submenu-list':!root, 'p-active-submenu': (-slideMenu.left == (index * menuWidth))}"
+Added:   <ul #sublist [ngClass]="{'p-slidemenu-rootlist':root, 'p-submenu-list':!root, 'p-active-submenu': isActive}"
+
+-------------------
+Commit: ad7d4900e
+Date: 2021-09-17 16:17:57 +0300
+Message: Fixed #10629 Tailwind Theme
+
+Class Changes:
+File: src/assets/components/themes/tailwind-light/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem:last-child {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: 2e91d8f04
+Date: 2021-03-08 13:25:09 +0300
+Message: Fixed #9680 - Menubar menuitems must have menu/menubar as parent
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}">
+Added:   <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}" [attr.role]="root ? 'menubar' : 'menu'">
+
+-------------------
+Commit: e12be4944
+Date: 2020-11-09 18:18:06 +0300
+Message: Refactor #9499
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Added:   let childSublist = DomHandler.findSingle(menuitem, '.p-submenu-list');
+
+-------------------
+Commit: f5bf16b1c
+Date: 2020-11-07 04:04:32 +0300
+Message: Fixed  #9499 - Add keyboard support to ContextMenu
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.css
+
+Removed: .p-contextmenu .p-menuitem-active > p-contextmenusub > .p-submenu-list {
+Added:   .p-contextmenu .p-menuitem-active > p-contextmenusub > .p-submenu-list.p-submenu-list-active {
+
+Removed: <ul [ngClass]="{'p-submenu-list':!root}">
+Added:   <ul #sublist [ngClass]="{'p-submenu-list':!root}">
+
+Added:   let childSublist = DomHandler.findSingle(event.currentTarget, '.p-submenu-list');
+
+Added:   let childSublist = DomHandler.findSingle(menuitem, '.p-submenu-list');
+
+Added:   let sublist = DomHandler.findSingle(menuitem, '.p-submenu-list');
+
+Added:   let sublist = DomHandler.findSingle(activeItem, '.p-submenu-list');
+
+-------------------
+Commit: eef45d85e
+Date: 2020-10-08 16:29:09 +0300
+Message: Fixed #9379 - Align tiered menu behavior with menubar
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.ts
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root}" (click)="listClick($event)" role="menubar">
+Added:   <ul [ngClass]="{'p-submenu-list': !root}">
+
+-------------------
+Commit: 0ae6df1d6
+Date: 2020-10-07 22:54:28 +0300
+Message: Theme update: Remove fluent dark, cosmetics on config
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-contextmenu .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list .p-menu-separator {
+
+Removed: .p-menubar .p-submenu-list .p-submenu-icon {
+
+Removed: .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Removed: .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Removed: .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Removed: .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Removed: .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: 768a46792
+Date: 2020-08-14 12:24:27 +0300
+Message: Update menubar.spec.ts
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Added:   const firstSubmenuList = fixture.debugElement.query(By.css('.p-submenu-list'));
+
+-------------------
+Commit: 3642a0b89
+Date: 2020-08-14 12:24:14 +0300
+Message: Fixed #9127 - Menubar not working on mobile devices
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}"
+Added:   <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}">
+
+-------------------
+Commit: 390a3c101
+Date: 2020-08-11 17:08:12 +0300
+Message: #9116 - Unit tests should be pass for SlideMenu
+
+Class Changes:
+File: src/app/components/slidemenu/slidemenu.spec.ts
+
+Added:   expect(subMenu.nativeElement.className).not.toContain('p-submenu-list p-active-submenu');
+
+-------------------
+Commit: 333a777c0
+Date: 2020-07-23 18:05:46 +0300
+Message: PrimeOne compatibilty for SlideMenu
+
+Class Changes:
+File: src/app/components/slidemenu/slidemenu.css
+
+Added:   .p-slidemenu .p-submenu-list {
+
+Added:   .p-slidemenu .p-menuitem-active > .p-submenu > .p-submenu-list {
+
+Added:   .p-slidemenu .p-active-submenu > .p-menuitem-active > .p-submenu > .p-submenu-list {
+
+Added:   <ul [ngClass]="{'p-slidemenu-rootlist':root, 'p-submenu-list':!root, 'p-active-submenu': (-slideMenu.left == (index * menuWidth))}"
+
+-------------------
+Commit: 196bc45ae
+Date: 2020-07-23 17:10:38 +0300
+Message: Fixed menubar, tieredmenu and contextmenu
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.css
+
+Added:   .p-contextmenu .p-menuitem-active > p-contextmenusub > .p-submenu-list {
+
+Removed: .p-menubar-root-list > .p-menuitem-active > .p-submenu-list {
+Added:   .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list > .p-menuitem-active > .p-submenu-list  {
+Added:   .p-menubar .p-submenu-list > .p-menuitem-active > p-menubarsub > .p-submenu-list  {
+
+Removed: .p-tieredmenu .p-menuitem-active > .p-submenu-list {
+Added:   .p-tieredmenu .p-menuitem-active > p-tieredmenusub > .p-submenu-list {
+
+-------------------
+Commit: 6bc112970
+Date: 2020-07-20 18:24:40 +0300
+Message: Removed old gen themes
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-contextmenu .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list .p-menu-separator {
+
+Removed: .p-menubar .p-submenu-list .p-submenu-icon {
+
+Removed: .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Removed: .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Removed: .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Removed: .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Removed: .p-tieredmenu .p-submenu-list {
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   <ul [ngClass]="{'p-submenu-list':!root}">
+
+Added:   .p-menubar-root-list > .p-menuitem-active > .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list > .p-menuitem-active > .p-submenu-list  {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+
+Added:   <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}"
+
+Added:   .p-panelmenu .p-submenu-list {
+
+Added:   <ul [ngClass]="{'p-submenu-list': true, 'p-panelmenu-root-submenu': root}" [@submenu]="expanded ? {value: 'visible', params: {transitionParams: transitionOptions, height: '*'}} : {value: 'hidden', params: {transitionParams: transitionOptions, height: '0'}}" role="tree">
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+Added:   .p-tieredmenu .p-menuitem-active > .p-submenu-list {
+
+Added:   <ul [ngClass]="{'p-submenu-list': !root}" (click)="listClick($event)" role="menubar">
+
+-------------------
+Commit: d898efc59
+Date: 2020-07-16 10:02:56 +0300
+Message: New saga theme
+
+Class Changes:
+File: src/assets/components/themes/saga-blue/theme.css
+
+Added:   .p-contextmenu .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list .p-menu-separator {
+
+Added:   .p-menubar .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-root-list .p-submenu-list .p-menuitem-active > .p-menuitem-link > .p-submenu-icon {
+
+Added:   .p-panelmenu .p-panelmenu-content .p-submenu-list:not(.p-panelmenu-root-submenu) {
+
+Added:   .p-tieredmenu .p-submenu-list {
+
+
+============================
+CHANGE PATTERN SUMMARY
+============================
+
+CSS Class Modifications:
+- .p-submenu-icon :not(svg) added: 2 occurrences
+
+
+============================
+POTENTIAL CLASS REPLACEMENTS
+============================
+
+p-submenu-icon -> p-submenu-expanded (67% confidence)
+Found in 3 commits:
+- b891fd348: Theming | PanelMenu (2024-07-22 17:20:50 +0300)
+- fb5586646: Merge master into issue-11902 (2022-11-08 17:19:01 +0300)
+- 996150b2c: Update all files (2022-10-21 12:02:45 +0100)
+
+p-submenu-expanded -> p-submenu-icon (67% confidence)
+Found in 3 commits:
+- 373d8fed6: PanelMenu | Add accessibility enhancements (2023-07-26 12:21:04 +0300)
+- fb5586646: Merge master into issue-11902 (2022-11-08 17:19:01 +0300)
+- 996150b2c: Update all files (2022-10-21 12:02:45 +0100)
+

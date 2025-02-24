@@ -1,0 +1,1061 @@
+PrimeNG Changes for p-menuitem (v17-v19)
+============================
+
+-------------------
+Commit: 390f781ef
+Date: 2024-11-20 13:15:31 +0000
+Message: Remove tests
+
+Class Changes:
+File: /dev/null
+
+Removed: const menuItemCustomEl = fixture.debugElement.query(By.css('.p-menuitem.p-menuitem-custom'));
+
+Removed: const menuItemsEl = fixture.debugElement.queryAll(By.css('.p-menuitem'));
+
+Removed: const firstParentEl = parentEl.query(By.css('.p-menuitem'));
+
+Removed: const menuItems = fixture.debugElement.queryAll(By.css('.p-menuitem'));
+
+Removed: const menuItemLinks = fixture.debugElement.queryAll(By.css('.p-menuitem'));
+
+-------------------
+Commit: 1967524bd
+Date: 2024-11-14 17:22:38 +0300
+Message: update dock | basic & advanced doc
+
+Class Changes:
+File: apps/showcase/doc/dock/advanceddoc.ts
+
+Removed: .p-menuitem:first-child {
+
+Removed: .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: f6fd1a56d
+Date: 2024-07-31 11:29:34 +0300
+Message: Theming | Add contextmenu
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: 'p-menuitem': true,
+
+-------------------
+Commit: c9e61f303
+Date: 2024-07-23 11:30:10 +0300
+Message: remove tieredmenu.css
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-tieredmenu .p-menuitem {
+
+-------------------
+Commit: 6f5138116
+Date: 2024-07-23 11:29:33 +0300
+Message: Theming | MegaMenu
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-megamenu-root-list > .p-menuitem {
+
+Removed: .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-content > .p-menuitem-link > .p-submenu-icon:not(svg) {
+
+Removed: .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-content > .p-menuitem-link > .p-icon-wrapper {
+
+Removed: 'p-menuitem': true,
+
+-------------------
+Commit: 1b44914e5
+Date: 2024-07-23 11:04:07 +0300
+Message: Theming | TieredMenu
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.ts
+
+Removed: 'p-menuitem': true,
+
+-------------------
+Commit: b891fd348
+Date: 2024-07-22 17:20:50 +0300
+Message: Theming | PanelMenu
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: 'p-menuitem': true,
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar .p-menuitem {
+
+Removed: 'p-menuitem': true,
+
+-------------------
+Commit: 6c794b160
+Date: 2024-07-22 12:38:20 +0300
+Message: Theming | Add Menu
+
+Class Changes:
+File: src/app/components/menu/menu.ts
+
+Removed: class="p-menuitem"
+
+-------------------
+Commit: 45f4fb68c
+Date: 2024-07-17 17:07:04 +0300
+Message: Remove SlideMenu, fixes #16044
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-slidemenu .p-menuitem {
+
+Removed: .p-slidemenu ul:not(.p-active-submenu) > .p-menuitem:not(.p-menuitem-active),
+
+Removed: .p-slidemenu .p-active-submenu > .p-menuitem-active ~ .p-menuitem {
+
+Removed: 'p-menuitem': true,
+
+-------------------
+Commit: 081e0abb4
+Date: 2024-04-25 16:14:46 +0300
+Message: updated dock examples
+
+Class Changes:
+File: src/app/showcase/doc/dock/advanceddoc.ts
+
+Added:   .p-menuitem:first-child {
+
+Added:   .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: 5a2c26f11
+Date: 2023-10-09 22:55:27 +0300
+Message: Fixed #13827 - Update conditionals for disabled menu item
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: class="p-menuitem"
+Added:   'p-menuitem': true,
+
+-------------------
+Commit: 45f3cda1c
+Date: 2023-10-09 14:00:34 +0300
+Message: Fix #13830 SlideMenu: Deprecate from PrimeNG
+
+Class Changes:
+File: /dev/null
+
+Removed: <td>p-menuitem</td>
+
+-------------------
+Commit: e7c75b00f
+Date: 2023-07-26 12:21:25 +0300
+Message: remove test components
+
+Class Changes:
+File: /dev/null
+
+Removed: class="p-menuitem"
+
+-------------------
+Commit: 5ccf3e223
+Date: 2023-07-24 21:11:10 +0300
+Message: PanelMenu | New structure
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu_sub.ts
+
+Added:   class="p-menuitem"
+
+-------------------
+Commit: 2b5b33361
+Date: 2023-07-05 04:16:40 +0300
+Message: Accessibility | Menubar
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-link
+Added:   p-menuitem-link-active
+Similarity: 75%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-link
+Similarity: 75%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-content
+Similarity: 67%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-icon
+Similarity: 67%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-text
+Similarity: 67%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-badge
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-content
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-icon
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-text
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-badge
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-content
+Similarity: 67%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-text
+Similarity: 67%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-badge
+Similarity: 67%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: p-menuitem-text
+Added:   p-menuitem-content
+Similarity: 67%
+
+Removed: p-menuitem-text
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-text
+Added:   p-menuitem-icon
+Similarity: 67%
+
+Removed: p-menuitem-text
+Added:   p-menuitem-badge
+Similarity: 67%
+
+Removed: p-menuitem-text
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: p-menuitem-badge
+Added:   p-menuitem-content
+Similarity: 67%
+
+Removed: p-menuitem-badge
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-badge
+Added:   p-menuitem-icon
+Similarity: 67%
+
+Removed: p-menuitem-badge
+Added:   p-menuitem-text
+Similarity: 67%
+
+Removed: p-menuitem-badge
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-link-active
+Similarity: 50%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-link-active
+Similarity: 50%
+
+Removed: p-menuitem-text
+Added:   p-menuitem-link-active
+Similarity: 50%
+
+Removed: p-menuitem-badge
+Added:   p-menuitem-link-active
+Similarity: 50%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-content
+Similarity: 50%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-icon
+Similarity: 50%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-text
+Similarity: 50%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-badge
+Similarity: 50%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-active
+Similarity: 50%
+
+Removed: [ngClass]="{ 'p-menuitem': true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false }"
+Added:   'p-menuitem': true,
+
+-------------------
+Commit: cd1f6e5ca
+Date: 2023-06-27 02:01:15 +0300
+Message: Menu | Update accessibility, add arialabel, arialabelledby, fixes #13253
+
+Class Changes:
+File: src/app/components/menu/menu.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-link
+Added:   p-menuitem-content
+Similarity: 67%
+
+Removed: if (nextItem) return DomHandler.hasClass(nextItem, 'p-disabled') || !DomHandler.hasClass(nextItem, 'p-menuitem') ? this.findNextItem(nextItem) : nextItem;
+
+Removed: if (prevItem) return DomHandler.hasClass(prevItem, 'p-disabled') || !DomHandler.hasClass(prevItem, 'p-menuitem') ? this.findPrevItem(prevItem) : prevItem;
+
+-------------------
+Commit: d5d351f29
+Date: 2023-05-22 12:02:20 +0300
+Message: Refactor types
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: return activeItemKey == null ? null : DomHandler.findSingle(this.containerViewChild!.nativeElement, '.p-menuitem[data-ik="' + activeItemKey + '"]');
+Added:   return activeItemKey == null ? null : DomHandler.findSingle(this.containerViewChild?.nativeElement, '.p-menuitem[data-ik="' + activeItemKey + '"]');
+
+-------------------
+Commit: ac5f2e74e
+Date: 2023-05-17 14:06:24 +0300
+Message: Types | ContextMenu
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: return activeItemKey == null ? null : DomHandler.findSingle(this.containerViewChild.nativeElement, '.p-menuitem[data-ik="' + activeItemKey + '"]');
+Added:   return activeItemKey == null ? null : DomHandler.findSingle(this.containerViewChild!.nativeElement, '.p-menuitem[data-ik="' + activeItemKey + '"]');
+
+-------------------
+Commit: 6e3fad5a4
+Date: 2023-04-18 22:54:12 +0300
+Message: add missing margin
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.css
+
+Removed: .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-link > .p-submenu-icon {
+Added:   .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-link > .p-submenu-icon:not(svg) {
+
+Added:   .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-link > .p-icon-wrapper {
+
+-------------------
+Commit: 6474a5a14
+Date: 2023-03-28 11:22:48 +0300
+Message: Responsive improvements for docs
+
+Class Changes:
+File: src/app/showcase/pages/dock/dockdemo.scss
+
+Removed: .p-menuitem:first-child {
+
+-------------------
+Commit: f5129d8cc
+Date: 2023-03-16 11:51:52 +0300
+Message: New documentation
+
+Class Changes:
+File: /dev/null
+
+Potential Class Replacements:
+Removed: p-menuitem-text
+Added:   p-menuitem-icon
+Similarity: 67%
+
+Removed: p-menuitem-text
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-text
+Similarity: 67%
+
+Removed: p-menuitem-icon
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-text
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-icon
+Similarity: 67%
+
+Removed: .p-menuitem:first-child {
+
+Removed: .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: c3d7f0c13
+Date: 2021-10-25 13:28:01 +0300
+Message: Fixed #10771 - Menu | Keyboard Support
+
+Class Changes:
+File: src/app/components/menu/menu.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-link
+Added:   p-menuitem-link-active
+Similarity: 75%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-link
+Similarity: 75%
+
+Added:   return DomHandler.hasClass(nextItem, 'p-disabled') || !DomHandler.hasClass(nextItem, 'p-menuitem') ? this.findNextItem(nextItem) : nextItem;
+
+Added:   return DomHandler.hasClass(prevItem, 'p-disabled') || !DomHandler.hasClass(prevItem, 'p-menuitem') ? this.findPrevItem(prevItem) : prevItem;
+
+-------------------
+Commit: 3d89eb486
+Date: 2021-09-27 00:02:03 +0200
+Message: tooltip doesn't work after define tooltip on menuitem
+
+Class Changes:
+File: src/app/components/menu/menu.ts
+
+Removed: <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': (item.visible === false || submenu.visible === false)}" [ngStyle]="item.style" [class]="item.styleClass" role="none"></li>
+Added:   <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': (item.visible === false || submenu.visible === false)}" [ngStyle]="item.style" [class]="item.styleClass" pTooltip [tooltipOptions]="item.tooltipOptions" role="none"></li>
+
+-------------------
+Commit: 64a3fcb1e
+Date: 2021-09-24 12:46:57 +0300
+Message: Fixed #10668 - Menu | aria-role support
+
+Class Changes:
+File: src/app/components/menu/menu.ts
+
+Removed: <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': (item.visible === false || submenu.visible === false)}" [ngStyle]="item.style" [class]="item.styleClass"></li>
+Added:   <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': (item.visible === false || submenu.visible === false)}" [ngStyle]="item.style" [class]="item.styleClass" role="none"></li>
+
+Removed: <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': item.visible === false}" [ngStyle]="item.style" [class]="item.styleClass" pTooltip [tooltipOptions]="item.tooltipOptions"></li>
+Added:   <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': item.visible === false}" [ngStyle]="item.style" [class]="item.styleClass" pTooltip [tooltipOptions]="item.tooltipOptions" role="none"></li>
+
+-------------------
+Commit: 4b857acf9
+Date: 2021-07-30 11:02:34 +0300
+Message: Dock Demo
+
+Class Changes:
+File: src/app/showcase/components/dock/dockdemo.scss
+
+Added:   .p-menuitem:first-child {
+
+Added:   .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: b0dab2ccc
+Date: 2021-03-26 12:00:28 +0300
+Message: MenuBar unit test fixed
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Added:   const firstParentEl = parentEl.query(By.css('.p-menuitem'));
+
+-------------------
+Commit: 6ccdd0bba
+Date: 2021-03-26 11:57:33 +0300
+Message: Fixed #10045 - MenuItem's style and styleClass properties should be apply to li
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: <li *ngIf="!child.separator" #menuitem [ngClass]="{'p-menuitem':true,'p-menuitem-active': isActive(getKey(index)),'p-hidden': child.visible === false}"
+Added:   <li *ngIf="!child.separator" #menuitem [ngClass]="{'p-menuitem':true,'p-menuitem-active': isActive(getKey(index)),'p-hidden': child.visible === false}" [ngStyle]="child.style" [class]="child.styleClass"
+
+Removed: <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}" role="none">
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}" [ngStyle]="child.style" [class]="child.styleClass" role="none">
+
+Removed: <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}">
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}" [ngStyle]="child.style" [class]="child.styleClass">
+
+-------------------
+Commit: 2e91d8f04
+Date: 2021-03-08 13:25:09 +0300
+Message: Fixed #9680 - Menubar menuitems must have menu/menubar as parent
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}">
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}" role="none">
+
+-------------------
+Commit: 01685e141
+Date: 2020-11-17 13:44:41 +0300
+Message: Fixed #8293 - Add autoDisplay to MenuBar and TieredMenu
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}" (mouseenter)="onItemMouseEnter($event,child)">
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}">
+
+-------------------
+Commit: f5bf16b1c
+Date: 2020-11-07 04:04:32 +0300
+Message: Fixed  #9499 - Add keyboard support to ContextMenu
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: <li *ngIf="!child.separator" #item [ngClass]="{'p-menuitem':true,'p-menuitem-active': child === activeItem,'p-hidden': child.visible === false}"
+Added:   <li *ngIf="!child.separator" #menuitem [ngClass]="{'p-menuitem':true,'p-menuitem-active': isActive(getKey(index)),'p-hidden': child.visible === false}"
+
+Added:   return DomHandler.hasClass(menuitem, 'p-menuitem') && !DomHandler.hasClass(menuitem.children[0], 'p-disabled');
+
+Added:   return activeItemKey == null ? null : DomHandler.findSingle(this.containerViewChild.nativeElement, '.p-menuitem[data-ik="' + activeItemKey + '"]');
+
+-------------------
+Commit: 3fc808783
+Date: 2020-10-27 10:47:14 +0300
+Message: Fixed #9459 - Align tiered menu behavior with menubar
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: <li *ngIf="!child.separator" #item [ngClass]="{'p-menuitem':true,'p-menuitem-active':item==activeItem,'p-hidden': child.visible === false}"
+Added:   <li *ngIf="!child.separator" #item [ngClass]="{'p-menuitem':true,'p-menuitem-active': child === activeItem,'p-hidden': child.visible === false}"
+
+-------------------
+Commit: d257edd4b
+Date: 2020-10-25 17:44:31 +0300
+Message: Fixed #9451 - TieredMenu Keyboard Support
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.ts
+
+Added:   return DomHandler.hasClass(nextItem, 'p-disabled') || !DomHandler.hasClass(nextItem, 'p-menuitem') ? this.findNextItem(nextItem) : nextItem;
+
+Added:   return DomHandler.hasClass(prevItem, 'p-disabled') || !DomHandler.hasClass(prevItem, 'p-menuitem') ? this.findPrevItem(prevItem) : prevItem;
+
+-------------------
+Commit: eef45d85e
+Date: 2020-10-08 16:29:09 +0300
+Message: Fixed #9379 - Align tiered menu behavior with menubar
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-link
+Added:   p-menuitem-link-active
+Similarity: 75%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-link
+Similarity: 75%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: p-menuitem-active
+Added:   p-menuitem-link-active
+Similarity: 50%
+
+Removed: p-menuitem-link-active
+Added:   p-menuitem-active
+Similarity: 50%
+
+Removed: <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true,'p-menuitem-active':listItem==activeItem,'p-hidden': child.visible === false}"
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}" (mouseenter)="onItemMouseEnter($event,child)">
+
+-------------------
+Commit: 768a46792
+Date: 2020-08-14 12:24:27 +0300
+Message: Update menubar.spec.ts
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Added:   const firstParentEl = parentEl.query(By.css('.p-menuitem'));
+
+-------------------
+Commit: 3642a0b89
+Date: 2020-08-14 12:24:14 +0300
+Message: Fixed #9127 - Menubar not working on mobile devices
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active':listItem==activeItem, 'p-hidden': child.visible === false}"
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active': child === activeItem, 'p-hidden': child.visible === false}" (mouseenter)="onItemMouseEnter($event,child)">
+
+-------------------
+Commit: d91490512
+Date: 2020-08-11 10:46:10 +0300
+Message: #9116 - Unit tests should be pass for PanelMenu
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.spec.ts
+
+Added:   const menuItems = fixture.debugElement.queryAll(By.css('.p-menuitem'));
+
+Added:   const menuItemLinks = fixture.debugElement.queryAll(By.css('.p-menuitem'));
+
+-------------------
+Commit: 8eebe5cfc
+Date: 2020-08-06 22:39:41 +0300
+Message: #9116 - Unit tests should be pass for Menu
+
+Class Changes:
+File: src/app/components/menu/menu.spec.ts
+
+Added:   const menuItemsEl = fixture.debugElement.queryAll(By.css('.p-menuitem'));
+
+-------------------
+Commit: ffd6acf54
+Date: 2020-08-06 22:34:19 +0300
+Message: #9116 - Unit tests should be pass for MegaMenu
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.spec.ts
+
+Added:   const menuItemCustomEl = fixture.debugElement.query(By.css('.p-menuitem.p-menuitem-custom'));
+
+-------------------
+Commit: b5e497753
+Date: 2020-07-27 15:13:16 +0300
+Message: TieredMenu demo update
+
+Class Changes:
+File: src/app/showcase/components/tieredmenu/tieredmenudemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: 856845739
+Date: 2020-07-27 14:59:02 +0300
+Message: SlideMenu demo update
+
+Class Changes:
+File: src/app/showcase/components/slidemenu/slidemenudemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: b9711e8c3
+Date: 2020-07-27 14:50:31 +0300
+Message: PanelMenu demo update
+
+Class Changes:
+File: src/app/showcase/components/panelmenu/panelmenudemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: fcb87e254
+Date: 2020-07-27 14:39:51 +0300
+Message: Menubar demo update
+
+Class Changes:
+File: src/app/showcase/components/menubar/menubardemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: 0d7b74120
+Date: 2020-07-27 14:32:19 +0300
+Message: Megamenu demo update
+
+Class Changes:
+File: src/app/showcase/components/megamenu/megamenudemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: 4b6091078
+Date: 2020-07-27 12:51:06 +0300
+Message: ConextMenu demo update
+
+Class Changes:
+File: src/app/showcase/components/contextmenu/contextmenudemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: abcfc1b1b
+Date: 2020-07-27 12:34:32 +0300
+Message: Breadcrumb Demo Update
+
+Class Changes:
+File: src/app/showcase/components/breadcrumb/breadcrumbdemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: 41e8c7617
+Date: 2020-07-27 12:15:47 +0300
+Message: Menu Demo Update
+
+Class Changes:
+File: src/app/showcase/components/menu/menudemo.html
+
+Added:   <td>p-menuitem</td>
+
+-------------------
+Commit: c3aa2c489
+Date: 2020-07-24 19:13:06 +0300
+Message: Reimplemented splitbutton overlay with the menu component
+
+Class Changes:
+File: src/app/components/splitbutton/splitbutton.ts
+
+Removed: <li class="p-menuitem" role="menuitem" *ngIf="item.visible !== false && !item.separator" role="none">
+
+-------------------
+Commit: 701006eff
+Date: 2020-07-23 18:31:43 +0300
+Message: Implemented megamenu behavior similar to menubar
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.ts
+
+Potential Class Replacements:
+Removed: p-menuitem-active
+Added:   p-menuitem-link
+Similarity: 67%
+
+Removed: p-menuitem-link
+Added:   p-menuitem-active
+Similarity: 67%
+
+Removed: <li *ngIf="!category.separator" #item [ngClass]="{'p-menuitem':true,'p-menuitem-active':item==activeItem, 'p-hidden': category.visible === false}"
+Added:   <li *ngIf="!category.separator" [ngClass]="{'p-menuitem':true,'p-menuitem-active':category==activeItem, 'p-hidden': category.visible === false}"
+
+-------------------
+Commit: 333a777c0
+Date: 2020-07-23 18:05:46 +0300
+Message: PrimeOne compatibilty for SlideMenu
+
+Class Changes:
+File: src/app/components/slidemenu/slidemenu.css
+
+Added:   .p-slidemenu .p-menuitem {
+
+Added:   .p-slidemenu ul:not(.p-active-submenu) > .p-menuitem:not(.p-menuitem-active),
+
+Added:   .p-slidemenu .p-active-submenu > .p-menuitem-active ~ .p-menuitem {
+
+Added:   <li *ngIf="!child.separator" #listitem [ngClass]="{'p-menuitem':true,'p-menuitem-active':listitem==activeItem,'p-hidden': child.visible === false}"
+
+-------------------
+Commit: 90b27da1a
+Date: 2020-07-22 17:18:53 +0300
+Message: Migrated splitbutton to PrimeOne
+
+Class Changes:
+File: src/app/components/splitbutton/splitbutton.ts
+
+Added:   <li class="p-menuitem" role="menuitem" *ngIf="item.visible !== false && !item.separator" role="none">
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.css
+
+Added:   .p-contextmenu .p-menuitem {
+
+Added:   <li *ngIf="!child.separator" #item [ngClass]="{'p-menuitem':true,'p-menuitem-active':item==activeItem,'p-hidden': child.visible === false}"
+
+Added:   .p-megamenu-root-list > .p-menuitem {
+
+Added:   .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-link > .p-submenu-icon {
+
+Added:   <li *ngIf="!category.separator" #item [ngClass]="{'p-menuitem':true,'p-menuitem-active':item==activeItem, 'p-hidden': category.visible === false}"
+
+Added:   <li *ngIf="!item.separator" class="p-menuitem" [ngClass]="{'p-hidden': item.visible === false}" role="none">
+
+Added:   <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': (item.visible === false || submenu.visible === false)}" [ngStyle]="item.style" [class]="item.styleClass"></li>
+
+Added:   <li class="p-menuitem" *ngIf="!item.separator" [pMenuItemContent]="item" [ngClass]="{'p-hidden': item.visible === false}" [ngStyle]="item.style" [class]="item.styleClass"></li>
+
+Added:   .p-menubar .p-menuitem {
+
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true, 'p-menuitem-active':listItem==activeItem, 'p-hidden': child.visible === false}"
+
+Added:   <li *ngIf="!child.separator" class="p-menuitem" [ngClass]="child.styleClass" [class.p-hidden]="child.visible === false" [ngStyle]="child.style">
+
+Added:   .p-tieredmenu .p-menuitem {
+
+Added:   <li *ngIf="!child.separator" #listItem [ngClass]="{'p-menuitem':true,'p-menuitem-active':listItem==activeItem,'p-hidden': child.visible === false}"
+
+
+============================
+CHANGE PATTERN SUMMARY
+============================
+
+CSS Class Modifications:
+- .p-submenu-icon :not(svg) added: 2 occurrences
+
+
+============================
+POTENTIAL CLASS REPLACEMENTS
+============================
+
+p-menuitem-link -> p-menuitem-link-active (75% confidence)
+Found in 3 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- c3d7f0c13: Fixed #10771 - Menu | Keyboard Support (2021-10-25 13:28:01 +0300)
+- eef45d85e: Fixed #9379 - Align tiered menu behavior with menubar (2020-10-08 16:29:09 +0300)
+
+p-menuitem-link-active -> p-menuitem-link (75% confidence)
+Found in 3 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- c3d7f0c13: Fixed #10771 - Menu | Keyboard Support (2021-10-25 13:28:01 +0300)
+- eef45d85e: Fixed #9379 - Align tiered menu behavior with menubar (2020-10-08 16:29:09 +0300)
+
+p-menuitem-active -> p-menuitem-content (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-active -> p-menuitem-link (67% confidence)
+Found in 9 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- 6ccdd0bba: Fixed #10045 - MenuItem's style and styleClass properties should be apply to li (2021-03-26 11:57:33 +0300)
+- 01685e141: Fixed #8293 - Add autoDisplay to MenuBar and TieredMenu (2020-11-17 13:44:41 +0300)
+- ...and 6 more
+
+p-menuitem-active -> p-menuitem-icon (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-active -> p-menuitem-text (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-active -> p-menuitem-badge (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-link -> p-menuitem-content (67% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- cd1f6e5ca: Menu | Update accessibility, add arialabel, arialabelledby, fixes #13253 (2023-06-27 02:01:15 +0300)
+
+p-menuitem-link -> p-menuitem-icon (67% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- f5129d8cc: New documentation (2023-03-16 11:51:52 +0300)
+
+p-menuitem-link -> p-menuitem-text (67% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- f5129d8cc: New documentation (2023-03-16 11:51:52 +0300)
+
+p-menuitem-link -> p-menuitem-badge (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-link -> p-menuitem-active (67% confidence)
+Found in 7 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- 6ccdd0bba: Fixed #10045 - MenuItem's style and styleClass properties should be apply to li (2021-03-26 11:57:33 +0300)
+- 01685e141: Fixed #8293 - Add autoDisplay to MenuBar and TieredMenu (2020-11-17 13:44:41 +0300)
+- ...and 4 more
+
+p-menuitem-icon -> p-menuitem-content (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-icon -> p-menuitem-link (67% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- f5129d8cc: New documentation (2023-03-16 11:51:52 +0300)
+
+p-menuitem-icon -> p-menuitem-text (67% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- f5129d8cc: New documentation (2023-03-16 11:51:52 +0300)
+
+p-menuitem-icon -> p-menuitem-badge (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-icon -> p-menuitem-active (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-text -> p-menuitem-content (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-text -> p-menuitem-link (67% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- f5129d8cc: New documentation (2023-03-16 11:51:52 +0300)
+
+p-menuitem-text -> p-menuitem-icon (67% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- f5129d8cc: New documentation (2023-03-16 11:51:52 +0300)
+
+p-menuitem-text -> p-menuitem-badge (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-text -> p-menuitem-active (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-badge -> p-menuitem-content (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-badge -> p-menuitem-link (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-badge -> p-menuitem-icon (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-badge -> p-menuitem-text (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-badge -> p-menuitem-active (67% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-active -> p-menuitem-link-active (50% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- eef45d85e: Fixed #9379 - Align tiered menu behavior with menubar (2020-10-08 16:29:09 +0300)
+
+p-menuitem-icon -> p-menuitem-link-active (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-text -> p-menuitem-link-active (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-badge -> p-menuitem-link-active (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-link-active -> p-menuitem-content (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-link-active -> p-menuitem-icon (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-link-active -> p-menuitem-text (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-link-active -> p-menuitem-badge (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menuitem-link-active -> p-menuitem-active (50% confidence)
+Found in 2 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+- eef45d85e: Fixed #9379 - Align tiered menu behavior with menubar (2020-10-08 16:29:09 +0300)
+

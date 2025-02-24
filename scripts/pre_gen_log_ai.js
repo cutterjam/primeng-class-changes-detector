@@ -16,7 +16,7 @@ const argv = yargs(hideBin(process.argv))
         alias: 'o',
         type: 'string',
         description: 'Output directory for logs',
-        default: '/Users/cutternaismith/Documents/GitHub/primeng-class-changes-detector/class-changes-results'
+        default: '/Users/I6105/Documents/GitHub/primeng-class-changes-detector/class-changes-results'
     })
     .option('class-names', {
         alias: 'c',

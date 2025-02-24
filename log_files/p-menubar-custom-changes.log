@@ -1,0 +1,92 @@
+PrimeNG Changes for p-menubar-custom (v17-v19)
+============================
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar .p-menubar-custom,
+
+-------------------
+Commit: 833d4ff08
+Date: 2023-09-25 22:58:44 +0300
+Message: Refactor #13737
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Potential Class Replacements:
+Removed: p-menubar-end
+Added:   p-menubar-button
+Similarity: 67%
+
+Removed: p-menubar-button
+Added:   p-menubar-end
+Similarity: 67%
+
+Removed: p-menubar-root-list
+Added:   p-menubar-end
+Similarity: 50%
+
+Removed: p-menubar-root-list
+Added:   p-menubar-button
+Similarity: 50%
+
+Removed: p-menubar-end
+Added:   p-menubar-root-list
+Similarity: 50%
+
+Removed: p-menubar-button
+Added:   p-menubar-root-list
+Similarity: 50%
+
+Removed: .p-menubar .p-menubar-custom,
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Added:   .p-menubar .p-menubar-custom,
+
+
+============================
+CHANGE PATTERN SUMMARY
+============================
+
+
+============================
+POTENTIAL CLASS REPLACEMENTS
+============================
+
+p-menubar-end -> p-menubar-button (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-button -> p-menubar-end (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-root-list -> p-menubar-end (50% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-root-list -> p-menubar-button (50% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-end -> p-menubar-root-list (50% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-button -> p-menubar-root-list (50% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+

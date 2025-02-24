@@ -1,0 +1,462 @@
+PrimeNG Changes for p-menubar-root-list (v17-v19)
+============================
+
+-------------------
+Commit: cf0703166
+Date: 2024-11-21 11:56:09 +0300
+Message: Fixed #16793 - RTL Support (#16799)
+
+Class Changes:
+File: packages/primeng/src/menubar/style/menubarstyle.ts
+
+Potential Class Replacements:
+Removed: p-menubar-submenu
+Added:   p-menubar-submenu-icon
+Similarity: 75%
+
+Removed: p-menubar-item-active
+Added:   p-menubar-item
+Similarity: 75%
+
+Removed: p-menubar-item-active
+Added:   p-menubar-item-content
+Similarity: 75%
+
+Removed: p-menubar-submenu
+Added:   p-menubar-end
+Similarity: 67%
+
+Removed: p-menubar-submenu
+Added:   p-menubar-mobile
+Similarity: 67%
+
+Removed: p-menubar-submenu
+Added:   p-menubar-item
+Similarity: 67%
+
+Removed: p-menubar-submenu
+Added:   p-menubar-item-active
+Similarity: 50%
+
+Removed: p-menubar-submenu
+Added:   p-menubar-item-content
+Similarity: 50%
+
+Removed: p-menubar-item-active
+Added:   p-menubar-submenu
+Similarity: 50%
+
+Removed: p-menubar-item-active
+Added:   p-menubar-submenu-icon
+Similarity: 50%
+
+Removed: p-menubar-item-active
+Added:   p-menubar-end
+Similarity: 50%
+
+Removed: p-menubar-item-active
+Added:   p-menubar-mobile
+Similarity: 50%
+
+Added:   .p-menubar-mobile .p-menubar-root-list:dir(rtl) {
+
+Added:   .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content .p-menubar-submenu-icon:dir(rtl) {
+
+-------------------
+Commit: 390f781ef
+Date: 2024-11-20 13:15:31 +0000
+Message: Remove tests
+
+Class Changes:
+File: /dev/null
+
+Removed: const subMenuEl = fixture.debugElement.query(By.css('.p-menubar-root-list'));
+
+Removed: const subMenu = fixture.debugElement.query(By.css('.p-menubar-root-list')).componentInstance as MenubarSub;
+
+Removed: const menuEl = fixture.debugElement.query(By.css('.p-menubar-root-list'));
+
+-------------------
+Commit: 1967524bd
+Date: 2024-11-14 17:22:38 +0300
+Message: update dock | basic & advanced doc
+
+Class Changes:
+File: apps/showcase/doc/dock/advanceddoc.ts
+
+Removed: .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: 4481b74a5
+Date: 2024-09-22 21:04:00 +0300
+Message: Update documentation, make standalone docs, add theming docs
+
+Class Changes:
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Added:   rootList = 'p-menubar-root-list',
+
+-------------------
+Commit: b91877221
+Date: 2024-07-03 15:51:33 +0300
+Message: remove styles
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar-root-list,
+
+Removed: .p-menubar-root-list {
+
+Removed: .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content {
+
+Removed: .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content > .p-menubar-item-link {
+
+Removed: .p-menubar-mobile .p-menubar-root-list {
+
+Removed: .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content {
+
+Removed: .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content > .p-menubar-item-link {
+
+Removed: .p-menubar-mobile-active .p-menubar-root-list {
+
+Removed: .p-menubar-mobile .p-menubar-root-list .p-menubar-item {
+
+Removed: .p-menubar-mobile .p-menubar-root-list .p-menubar-separator {
+
+Removed: .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content .p-menubar-submenu-icon {
+
+Removed: .p-menubar-mobile .p-menubar-root-list > .p-menubar-item-active > .p-menubar-item-content .p-menubar-submenu-icon {
+
+Removed: rootList: 'p-menubar-root-list',
+
+-------------------
+Commit: 196523bbf
+Date: 2024-06-12 17:36:47 +0300
+Message: Fill style folders
+
+Class Changes:
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Added:   .p-menubar-root-list,
+
+Added:   .p-menubar-root-list {
+
+Added:   .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content {
+
+Added:   .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content > .p-menubar-item-link {
+
+Added:   .p-menubar-mobile .p-menubar-root-list {
+
+Added:   .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content {
+
+Added:   .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content > .p-menubar-item-link {
+
+Added:   .p-menubar-mobile-active .p-menubar-root-list {
+
+Added:   .p-menubar-mobile .p-menubar-root-list .p-menubar-item {
+
+Added:   .p-menubar-mobile .p-menubar-root-list .p-menubar-separator {
+
+Added:   .p-menubar-mobile .p-menubar-root-list > .p-menubar-item > .p-menubar-item-content .p-menubar-submenu-icon {
+
+Added:   .p-menubar-mobile .p-menubar-root-list > .p-menubar-item-active > .p-menubar-item-content .p-menubar-submenu-icon {
+
+Added:   rootList: 'p-menubar-root-list',
+
+-------------------
+Commit: 95485a30c
+Date: 2024-05-02 11:39:10 +0300
+Message: Sync primeng-sass-theme
+
+Class Changes:
+File: src/assets/components/themes/arya-blue/theme.css
+
+Removed: .p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-submenu-icon {
+
+-------------------
+Commit: 5e54a2521
+Date: 2024-04-30 17:57:14 +0100
+Message: fix unit test for menubar and progressbar component
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Removed: const parentEl = fixture.debugElement.query(By.css('.p-menubar-root-list'));
+
+-------------------
+Commit: 081e0abb4
+Date: 2024-04-25 16:14:46 +0300
+Message: updated dock examples
+
+Class Changes:
+File: src/app/showcase/doc/dock/advanceddoc.ts
+
+Added:   .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: 833d4ff08
+Date: 2023-09-25 22:58:44 +0300
+Message: Refactor #13737
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Potential Class Replacements:
+Removed: p-menubar-custom
+Added:   p-menubar-end
+Similarity: 67%
+
+Removed: p-menubar-custom
+Added:   p-menubar-button
+Similarity: 67%
+
+Removed: p-menubar-end
+Added:   p-menubar-custom
+Similarity: 67%
+
+Removed: p-menubar-end
+Added:   p-menubar-button
+Similarity: 67%
+
+Removed: p-menubar-button
+Added:   p-menubar-custom
+Similarity: 67%
+
+Removed: p-menubar-button
+Added:   p-menubar-end
+Similarity: 67%
+
+Removed: .p-menubar-root-list {
+
+Removed: .p-menubar-root-list > li ul {
+
+Removed: .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+
+Removed: .p-menubar .p-menubar-root-list .p-icon-wrapper {
+
+-------------------
+Commit: bddeceb83
+Date: 2023-07-26 12:22:24 +0300
+Message: Code format
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }"
+
+-------------------
+Commit: 2b5b33361
+Date: 2023-07-05 04:16:40 +0300
+Message: Accessibility | Menubar
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Potential Class Replacements:
+Removed: p-menubar-mobile-active
+Added:   p-menubar-button
+Similarity: 50%
+
+Removed: p-menubar-button
+Added:   p-menubar-mobile-active
+Similarity: 50%
+
+Removed: <ul [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }" [attr.role]="root ? 'menubar' : 'menu'">
+Added:   [ngClass]="{ 'p-submenu-list': !root, 'p-menubar-root-list': root }"
+
+-------------------
+Commit: f5129d8cc
+Date: 2023-03-16 11:51:52 +0300
+Message: New documentation
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: 608548988
+Date: 2023-01-18 15:55:05 +0300
+Message: Update tests
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Removed: const parentEl = fixture.debugElement.query(By.css('.p-menubar-root-list'));
+
+-------------------
+Commit: 4b857acf9
+Date: 2021-07-30 11:02:34 +0300
+Message: Dock Demo
+
+Class Changes:
+File: src/app/showcase/components/dock/dockdemo.scss
+
+Added:   .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+
+-------------------
+Commit: 9ac0baf5c
+Date: 2021-06-03 12:22:22 +0300
+Message: Fixed #10298 - Customizable ZIndex Layering
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: let rootmenu = DomHandler.findSingle(this.el.nativeElement,".p-menubar-root-list")
+
+-------------------
+Commit: 2e91d8f04
+Date: 2021-03-08 13:25:09 +0300
+Message: Fixed #9680 - Menubar menuitems must have menu/menubar as parent
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}">
+Added:   <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}" [attr.role]="root ? 'menubar' : 'menu'">
+
+-------------------
+Commit: 3642a0b89
+Date: 2020-08-14 12:24:14 +0300
+Message: Fixed #9127 - Menubar not working on mobile devices
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}"
+Added:   <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}">
+
+Added:   let rootmenu = DomHandler.findSingle(this.el.nativeElement,".p-menubar-root-list")
+
+-------------------
+Commit: 045076382
+Date: 2020-08-06 22:41:20 +0300
+Message: #9116 - Unit tests should be pass for MenuBar
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Added:   const subMenuEl = fixture.debugElement.query(By.css('.p-menubar-root-list'));
+
+Added:   const subMenu = fixture.debugElement.query(By.css('.p-menubar-root-list')).componentInstance as MenubarSub;
+
+Added:   const menuEl = fixture.debugElement.query(By.css('.p-menubar-root-list'));
+
+-------------------
+Commit: 196bc45ae
+Date: 2020-07-23 17:10:38 +0300
+Message: Fixed menubar, tieredmenu and contextmenu
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Removed: .p-menubar-root-list > .p-menuitem-active > .p-submenu-list {
+Added:   .p-menubar-root-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Added:   .p-menubar-root-list {
+
+Added:   .p-menubar-root-list > li ul {
+
+Added:   .p-menubar-root-list > .p-menuitem-active > .p-submenu-list {
+
+Added:   <ul [ngClass]="{'p-submenu-list': !root, 'p-menubar-root-list': root}"
+
+
+============================
+CHANGE PATTERN SUMMARY
+============================
+
+
+============================
+POTENTIAL CLASS REPLACEMENTS
+============================
+
+p-menubar-submenu -> p-menubar-submenu-icon (75% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-item-active -> p-menubar-item (75% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-item-active -> p-menubar-item-content (75% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-submenu -> p-menubar-end (67% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-submenu -> p-menubar-mobile (67% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-submenu -> p-menubar-item (67% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-custom -> p-menubar-end (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-custom -> p-menubar-button (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-end -> p-menubar-custom (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-end -> p-menubar-button (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-button -> p-menubar-custom (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-button -> p-menubar-end (67% confidence)
+Found in 1 commits:
+- 833d4ff08: Refactor #13737 (2023-09-25 22:58:44 +0300)
+
+p-menubar-submenu -> p-menubar-item-active (50% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-submenu -> p-menubar-item-content (50% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-item-active -> p-menubar-submenu (50% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-item-active -> p-menubar-submenu-icon (50% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-item-active -> p-menubar-end (50% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-item-active -> p-menubar-mobile (50% confidence)
+Found in 1 commits:
+- cf0703166: Fixed #16793 - RTL Support (#16799) (2024-11-21 11:56:09 +0300)
+
+p-menubar-mobile-active -> p-menubar-button (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
+p-menubar-button -> p-menubar-mobile-active (50% confidence)
+Found in 1 commits:
+- 2b5b33361: Accessibility | Menubar (2023-07-05 04:16:40 +0300)
+
