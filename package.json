@@ -19,6 +19,7 @@
     "url": "https://github.com/I6105/primeng-class-changes-detector/issues"
   },
   "dependencies": {
+    "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "openai": "^4.85.3",
     "yargs": "^17.7.2"
