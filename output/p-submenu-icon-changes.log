@@ -1,0 +1,589 @@
+PrimeNG Changes for p-submenu-icon (v17-v19)
+============================
+
+-------------------
+Commit: 1967524bd
+Date: 2024-11-14 17:22:38 +0300
+Message: update dock | basic & advanced doc
+
+Class Changes:
+File: apps/showcase/doc/dock/advanceddoc.ts
+
+Removed: > .p-submenu-icon {
+
+-------------------
+Commit: f6fd1a56d
+Date: 2024-07-31 11:29:34 +0300
+Message: Theming | Add contextmenu
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" />
+
+-------------------
+Commit: c9e61f303
+Date: 2024-07-23 11:30:10 +0300
+Message: remove tieredmenu.css
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-tieredmenu .p-menuitem-link .p-submenu-icon:not(svg) {
+
+-------------------
+Commit: 6f5138116
+Date: 2024-07-23 11:29:33 +0300
+Message: Theming | MegaMenu
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-content > .p-menuitem-link > .p-submenu-icon:not(svg) {
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" *ngIf="orientation === 'horizontal'" [attr.aria-hidden]="true" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" *ngIf="orientation === 'vertical'" [attr.aria-hidden]="true" />
+
+-------------------
+Commit: 1b44914e5
+Date: 2024-07-23 11:04:07 +0300
+Message: Theming | TieredMenu
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.ts
+
+Removed: <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" />
+
+-------------------
+Commit: b891fd348
+Date: 2024-07-22 17:20:50 +0300
+Message: Theming | PanelMenu
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="isItemActive(processedItem)" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!isItemActive(processedItem)" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <AngleDownIcon *ngIf="isItemActive(processedItem)" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <AngleRightIcon *ngIf="!isItemActive(processedItem)" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <ChevronDownIcon [styleClass]="'p-submenu-icon'" *ngIf="isItemActive(item)" />
+
+Removed: <ChevronRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!isItemActive(item)" />
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" />
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" *ngIf="root" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" *ngIf="!root" />
+
+-------------------
+Commit: 45f4fb68c
+Date: 2024-07-17 17:07:04 +0300
+Message: Remove SlideMenu, fixes #16044
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-slidemenu .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" />
+
+-------------------
+Commit: 9df3367a5
+Date: 2024-05-03 16:42:45 +0300
+Message: Code format
+Version: (tag: 17.16.0)
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: <ChevronDownIcon [styleClass]="'p-submenu-icon'" *ngIf="isItemActive(item)" />
+
+Removed: <ChevronRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!isItemActive(item)" />
+
+-------------------
+Commit: 081e0abb4
+Date: 2024-04-25 16:14:46 +0300
+Message: updated dock examples
+
+Class Changes:
+File: src/app/showcase/doc/dock/advanceddoc.ts
+
+Added:   > .p-submenu-icon {
+
+-------------------
+Commit: 45f3cda1c
+Date: 2023-10-09 14:00:34 +0300
+Message: Fix #13830 SlideMenu: Deprecate from PrimeNG
+
+Class Changes:
+File: /dev/null
+
+Removed: <td>p-submenu-icon</td>
+
+-------------------
+Commit: 833d4ff08
+Date: 2023-09-25 22:58:44 +0300
+Message: Refactor #13737
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.css
+
+Removed: .p-contextmenu .p-menuitem-link .p-submenu-icon:not(svg) {
+Added:   .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-content > .p-menuitem-link > .p-submenu-icon:not(svg) {
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: .p-slidemenu .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: .p-tieredmenu .p-menuitem-link .p-submenu-icon:not(svg) {
+
+-------------------
+Commit: e7c75b00f
+Date: 2023-07-26 12:21:25 +0300
+Message: remove test components
+
+Class Changes:
+File: /dev/null
+
+Removed: <ChevronDownIcon [styleClass]="'p-submenu-icon'" *ngIf="isItemActive(item)" />
+
+Removed: <ChevronRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!isItemActive(item)" />
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="processedItem.expanded" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!processedItem.expanded" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <AngleDownIcon *ngIf="processedItem.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <AngleRightIcon *ngIf="!processedItem.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+-------------------
+Commit: 373d8fed6
+Date: 2023-07-26 12:21:04 +0300
+Message: PanelMenu | Add accessibility enhancements
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="child.expanded" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!child.expanded" [ngStyle]="getItemProp(child, 'iconStyle')" />
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="isItemActive(processedItem)" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!isItemActive(processedItem)" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Removed: <AngleDownIcon *ngIf="child.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+Removed: <AngleRightIcon *ngIf="!child.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(child, 'iconStyle')" />
+Added:   <AngleDownIcon *ngIf="isItemActive(processedItem)" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Added:   <AngleRightIcon *ngIf="!isItemActive(processedItem)" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+-------------------
+Commit: 5ccf3e223
+Date: 2023-07-24 21:11:10 +0300
+Message: PanelMenu | New structure
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu_new.ts
+
+Added:   <ChevronDownIcon [styleClass]="'p-submenu-icon'" *ngIf="isItemActive(item)" />
+
+Added:   <ChevronRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!isItemActive(item)" />
+
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="processedItem.expanded" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!processedItem.expanded" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Added:   <AngleDownIcon *ngIf="processedItem.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+Added:   <AngleRightIcon *ngIf="!processedItem.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(processedItem, 'iconStyle')" />
+
+-------------------
+Commit: 88806a48a
+Date: 2023-07-20 18:30:17 +0300
+Message: Update visible items method
+
+Class Changes:
+File: src/app/components/panelmenu/panelmenu.ts
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="isItemActive(child)" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!isItemActive(child)" [ngStyle]="getItemProp(child, 'iconStyle')" />
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="child.expanded" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!child.expanded" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+Removed: <AngleDownIcon *ngIf="isItemActive(child)" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+Removed: <AngleRightIcon *ngIf="!isItemActive(child)" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(child, 'iconStyle')" />
+Added:   <AngleDownIcon *ngIf="child.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+Added:   <AngleRightIcon *ngIf="!child.expanded" [styleClass]="'p-submenu-icon'" [ngStyle]="getItemProp(child, 'iconStyle')" />
+
+-------------------
+Commit: 2b5b33361
+Date: 2023-07-05 04:16:40 +0300
+Message: Accessibility | Menubar
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root" />
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root" />
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true"/>
+
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" *ngIf="root" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" [attr.data-pc-section]="'submenuicon'" [attr.aria-hidden]="true" *ngIf="!root" />
+
+-------------------
+Commit: fc86cf66a
+Date: 2023-05-04 14:59:52 +0300
+Message: code format
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'horizontal'"/>
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'vertical'"/>
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'horizontal'" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'vertical'" />
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root"/>
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root"/>
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root" />
+
+Removed: <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+Removed: <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+Removed: <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+-------------------
+Commit: 2db11fafd
+Date: 2023-05-03 10:56:31 +0300
+Message: code format
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'horizontal'"/>
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'vertical'"/>
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'horizontal'" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'vertical'" />
+
+Removed: <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root"/>
+
+Removed: <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root"/>
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root" />
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root" />
+
+Removed: <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+Removed: <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+Removed: <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'" />
+
+-------------------
+Commit: 2a9471384
+Date: 2023-04-26 10:27:21 +0300
+Message: fix icon alignment
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.css
+
+Removed: .p-tieredmenu .p-menuitem-link .p-submenu-icon {
+Added:   .p-tieredmenu .p-menuitem-link .p-submenu-icon:not(svg) {
+
+-------------------
+Commit: 6e3fad5a4
+Date: 2023-04-18 22:54:12 +0300
+Message: add missing margin
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.css
+
+Removed: .p-contextmenu .p-menuitem-link .p-submenu-icon {
+Added:   .p-contextmenu .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-link > .p-submenu-icon {
+Added:   .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-link > .p-submenu-icon:not(svg) {
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: .p-slidemenu .p-menuitem-link .p-submenu-icon {
+Added:   .p-slidemenu .p-menuitem-link .p-submenu-icon:not(svg) {
+
+-------------------
+Commit: e2c665980
+Date: 2023-04-18 15:55:45 +0300
+Message: replace ngClass with styleClass
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+
+Added:   <span *ngIf="contextMenu.submenuIconTemplate" class="p-submenu-icon">
+
+Removed: <AngleDownIcon [ngClass]="'p-submenu-icon'" *ngIf="orientation === 'horizontal'"/>
+
+Removed: <AngleRightIcon [ngClass]="'p-submenu-icon'" *ngIf="orientation === 'vertical'"/>
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'horizontal'"/>
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="orientation === 'vertical'"/>
+
+Removed: <AngleDownIcon [ngClass]="'p-submenu-icon'" *ngIf="root"/>
+
+Removed: <AngleRightIcon [ngClass]="'p-submenu-icon'" *ngIf="!root"/>
+Added:   <AngleDownIcon [styleClass]="'p-submenu-icon'" *ngIf="root"/>
+
+Added:   <AngleRightIcon [styleClass]="'p-submenu-icon'" *ngIf="!root"/>
+
+Removed: <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+
+Removed: <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+Added:   <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+
+Removed: <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+Added:   <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [styleClass]="'p-submenu-icon'"/>
+
+-------------------
+Commit: dc8cd0c86
+Date: 2023-04-17 14:37:35 +0300
+Message: remove pi-fw class
+
+Class Changes:
+File: src/app/components/slidemenu/slidemenu.ts
+
+Removed: <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon pi-fw'"/>
+Added:   <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+
+Removed: <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon pi-fw'"/>
+Added:   <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+
+-------------------
+Commit: 63f42135b
+Date: 2023-04-10 17:41:49 +0300
+Message: add svg icon and template
+
+Class Changes:
+File: src/app/components/tieredmenu/tieredmenu.ts
+
+Removed: <span class="p-submenu-icon pi pi-angle-right" *ngIf="child.items"></span>
+Added:   <AngleRightIcon *ngIf="!tieredMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+
+-------------------
+Commit: aabc4ada5
+Date: 2023-04-10 17:26:45 +0300
+Message: add svg icons and icon templates
+
+Class Changes:
+File: src/app/components/slidemenu/slidemenu.ts
+
+Removed: <span class="p-submenu-icon pi pi-fw pi-angle-right" *ngIf="child.items"></span>
+Added:   <AngleRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon pi-fw'"/>
+
+Removed: <span class="p-submenu-icon pi pi-fw pi-caret-right" *ngIf="child.items"></span>
+Added:   <CaretRightIcon *ngIf="!slideMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon pi-fw'"/>
+
+-------------------
+Commit: 7b18eaac4
+Date: 2023-04-10 15:38:23 +0300
+Message: add svg icons and templates
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.ts
+
+Removed: <span *ngIf="category.items" class="p-submenu-icon pi" [ngClass]="{ 'pi-angle-down': orientation == 'horizontal', 'pi-angle-right': orientation == 'vertical' }"></span>
+Added:   <AngleDownIcon [ngClass]="'p-submenu-icon'" *ngIf="orientation === 'horizontal'"/>
+
+Added:   <AngleRightIcon [ngClass]="'p-submenu-icon'" *ngIf="orientation === 'vertical'"/>
+
+-------------------
+Commit: d1930e51c
+Date: 2023-04-10 15:26:01 +0300
+Message: add svg icons and templates
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <span class="p-submenu-icon pi" *ngIf="child.items" [ngClass]="{ 'pi-angle-down': root, 'pi-angle-right': !root }"></span>
+Added:   <AngleDownIcon [ngClass]="'p-submenu-icon'" *ngIf="root"/>
+
+Added:   <AngleRightIcon [ngClass]="'p-submenu-icon'" *ngIf="!root"/>
+
+-------------------
+Commit: 5d1619c63
+Date: 2023-04-10 13:10:15 +0300
+Message: add svg icon
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.ts
+
+Removed: <span class="p-submenu-icon pi pi-angle-right" *ngIf="child.items"></span>
+Added:   <AngleRightIcon *ngIf="!contextMenu.submenuIconTemplate" [ngClass]="'p-submenu-icon'"/>
+
+-------------------
+Commit: f5129d8cc
+Date: 2023-03-16 11:51:52 +0300
+Message: New documentation
+
+Class Changes:
+File: /dev/null
+
+Removed: > .p-submenu-icon {
+
+-------------------
+Commit: fb5586646
+Date: 2022-11-08 17:19:01 +0300
+Message: Merge master into issue-11902
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.ts
+
+Removed: <span *ngIf="category.items" class="p-submenu-icon pi" [ngClass]="{'pi-angle-down':orientation=='horizontal','pi-angle-right':orientation=='vertical'}"></span>
+Added:   <span *ngIf="category.items" class="p-submenu-icon pi" [ngClass]="{ 'pi-angle-down': orientation == 'horizontal', 'pi-angle-right': orientation == 'vertical' }"></span>
+
+Removed: <span class="p-submenu-icon pi" *ngIf="child.items" [ngClass]="{'pi-angle-down':root,'pi-angle-right':!root}"></span>
+Added:   <span class="p-submenu-icon pi" *ngIf="child.items" [ngClass]="{ 'pi-angle-down': root, 'pi-angle-right': !root }"></span>
+
+-------------------
+Commit: 996150b2c
+Date: 2022-10-21 12:02:45 +0100
+Message: Update all files
+
+Class Changes:
+File: src/app/components/megamenu/megamenu.ts
+
+Removed: <span *ngIf="category.items" class="p-submenu-icon pi" [ngClass]="{'pi-angle-down':orientation=='horizontal','pi-angle-right':orientation=='vertical'}"></span>
+Added:   <span *ngIf="category.items" class="p-submenu-icon pi" [ngClass]="{ 'pi-angle-down': orientation == 'horizontal', 'pi-angle-right': orientation == 'vertical' }"></span>
+
+Removed: <span class="p-submenu-icon pi" *ngIf="child.items" [ngClass]="{'pi-angle-down':root,'pi-angle-right':!root}"></span>
+Added:   <span class="p-submenu-icon pi" *ngIf="child.items" [ngClass]="{ 'pi-angle-down': root, 'pi-angle-right': !root }"></span>
+
+-------------------
+Commit: 4b857acf9
+Date: 2021-07-30 11:02:34 +0300
+Message: Dock Demo
+
+Class Changes:
+File: src/app/showcase/components/dock/dockdemo.scss
+
+Added:   > .p-submenu-icon {
+
+-------------------
+Commit: b5e497753
+Date: 2020-07-27 15:13:16 +0300
+Message: TieredMenu demo update
+
+Class Changes:
+File: src/app/showcase/components/tieredmenu/tieredmenudemo.html
+
+Added:   <td>p-submenu-icon</td>
+
+-------------------
+Commit: 856845739
+Date: 2020-07-27 14:59:02 +0300
+Message: SlideMenu demo update
+
+Class Changes:
+File: src/app/showcase/components/slidemenu/slidemenudemo.html
+
+Added:   <td>p-submenu-icon</td>
+
+-------------------
+Commit: fcb87e254
+Date: 2020-07-27 14:39:51 +0300
+Message: Menubar demo update
+
+Class Changes:
+File: src/app/showcase/components/menubar/menubardemo.html
+
+Added:   <td>p-submenu-icon</td>
+
+-------------------
+Commit: 0d7b74120
+Date: 2020-07-27 14:32:19 +0300
+Message: Megamenu demo update
+
+Class Changes:
+File: src/app/showcase/components/megamenu/megamenudemo.html
+
+Added:   <td>p-submenu-icon</td>
+
+-------------------
+Commit: 4b6091078
+Date: 2020-07-27 12:51:06 +0300
+Message: ConextMenu demo update
+
+Class Changes:
+File: src/app/showcase/components/contextmenu/contextmenudemo.html
+
+Added:   <td>p-submenu-icon</td>
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+
+Class Changes:
+File: src/app/components/contextmenu/contextmenu.css
+
+Added:   .p-contextmenu .p-menuitem-link .p-submenu-icon {
+
+Added:   .p-megamenu-vertical .p-megamenu-root-list > .p-menuitem > .p-menuitem-link > .p-submenu-icon {
+
+Added:   <span *ngIf="category.items" class="p-submenu-icon pi" [ngClass]="{'pi-angle-down':orientation=='horizontal','pi-angle-right':orientation=='vertical'}"></span>
+
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+
+Added:   <span class="p-submenu-icon pi" *ngIf="child.items" [ngClass]="{'pi-angle-down':root,'pi-angle-right':!root}"></span>
+
+Added:   .p-tieredmenu .p-menuitem-link .p-submenu-icon {
+

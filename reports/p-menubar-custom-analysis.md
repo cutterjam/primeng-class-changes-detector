@@ -1,34 +1,30 @@
-# PrimeNG Class Name Changes for `p-menubar-custom` (v17-v19)
+# PrimeNG `p-menubar-custom` Class Analysis
 
-## Summary of Important Class Name Changes
+## Summary of Changes
 
-1. The `p-menubar-custom` class was removed from the `.p-menubar` selector in commit `c953a33c1` (2024-07-22).
-2. Several classes related to the menu bar structure were modified or replaced in commit `833d4ff08` (2023-09-25).
+The `p-menubar-custom` class has been completely removed from the PrimeNG library between versions 17 and 19. This change occurred in two separate commits:
 
-## High Confidence Replacements (67%+ Similarity)
+1. First in September 2023 (commit 833d4ff08) as part of a refactoring effort (#13737)
+2. Then confirmed in July 2024 (commit c953a33c1) during a theming update for Menubar
 
-1. `p-menubar-end` was replaced with `p-menubar-button` (67% similarity).
-2. `p-menubar-button` was replaced with `p-menubar-end` (67% similarity).
+This indicates a deliberate removal of the class as part of the library's evolution, starting with a refactoring and finalized with theming changes.
+
+## High Confidence Replacements
+
+There are no explicit replacements mentioned in the change logs for the `p-menubar-custom` class. The class was simply removed without a direct replacement being specified.
 
 ## Ambiguous Bidirectional Changes
 
-The following class changes had a 50% similarity, indicating potential ambiguity:
-
-1. `p-menubar-root-list` was replaced with `p-menubar-end`.
-2. `p-menubar-root-list` was replaced with `p-menubar-button`.
-3. `p-menubar-end` was replaced with `p-menubar-root-list`.
-4. `p-menubar-button` was replaced with `p-menubar-root-list`.
+No ambiguous bidirectional changes were detected in this log.
 
 ## Structural Changes
 
-The main structural change was the removal of the `p-menubar-custom` class from the `.p-menubar` selector in commit `c953a33c1`. This suggests that the custom styling for the menu bar was removed or modified.
+- The `.p-menubar .p-menubar-custom` selector was originally added in July 2020 (commit c5f3d87e3) during a migration to "primeone"
+- The selector was completely removed as of September 2023, suggesting either:
+  1. The functionality it provided is no longer needed
+  2. The functionality was moved to a different class/approach
+  3. The styling pattern changed in a way that made this class obsolete
 
-## Implementation Recommendations
+The removal suggests a structural change in how custom content within the menubar component is handled in newer versions of PrimeNG.
 
-1. **Update Theme Files**: Review your custom theme files and update any references to the `p-menubar-custom` class. This class has been removed, so you will need to adjust your theme accordingly.
-
-2. **Verify High Confidence Replacements**: For the 67% similar class replacements (`p-menubar-end` -> `p-menubar-button` and `p-menubar-button` -> `p-menubar-end`), you can confidently replace these classes in your application code and theme files.
-
-3. **Investigate Ambiguous Changes**: The 50% similar class replacements may require more investigation to determine the appropriate replacement. Analyze the context of these changes in the PrimeNG codebase and your application to ensure you apply the correct replacements.
-
-4. **Test Thoroughly**: After making the necessary changes, thoroughly test your application to ensure the menu bar functionality and appearance are working as expected.
+Since no replacement is explicitly mentioned, developers who were using this class would need to investigate the current documentation for the preferred way to handle custom menubar content in the newer versions.

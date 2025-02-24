@@ -1,0 +1,558 @@
+PrimeNG Changes for p-menubar (v17-v19)
+============================
+
+-------------------
+Commit: 390f781ef
+Date: 2024-11-20 13:15:31 +0000
+Message: Remove tests
+
+Class Changes:
+File: /dev/null
+
+Removed: const menuEl = fixture.debugElement.query(By.css('.p-menubar'));
+
+-------------------
+Commit: 1967524bd
+Date: 2024-11-14 17:22:38 +0300
+Message: update dock | basic & advanced doc
+
+Class Changes:
+File: apps/showcase/doc/dock/advanceddoc.ts
+
+Added:   .dock-demo .p-menubar {
+
+Removed: .p-menubar {
+
+-------------------
+Commit: e4e6219d7
+Date: 2024-11-08 10:30:42 +0000
+Message: init
+
+Class Changes:
+File: packages/primeng/src/menubar/menubar.ts
+
+Removed: [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile': queryMatches, 'p-menubar-mobile-active': mobileActive }"
+Added:   <div [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile': queryMatches, 'p-menubar-mobile-active': mobileActive }" [class]="styleClass" [ngStyle]="style" [attr.data-pc-section]="'root'" [attr.data-pc-name]="'menubar'">
+
+-------------------
+Commit: 697977734
+Date: 2024-11-01 15:06:37 +0300
+Message: Add missing sharedmodule imports
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile': queryMatches , 'p-menubar-mobile-active': mobileActive}"
+Added:   [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile': queryMatches, 'p-menubar-mobile-active': mobileActive }"
+
+-------------------
+Commit: 1300f9722
+Date: 2024-10-22 19:56:33 +0300
+Message: fix menubar responsive
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile-active': mobileActive }"
+Added:   [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile': queryMatches , 'p-menubar-mobile-active': mobileActive}"
+
+-------------------
+Commit: b32d8b746
+Date: 2024-10-07 11:34:18 +0300
+Message: update dock | advanced
+
+Class Changes:
+File: src/app/showcase/doc/dock/advanceddoc.ts
+
+Removed: <p-menubar [model]="menubarItems">
+
+-------------------
+Commit: 4481b74a5
+Date: 2024-09-22 21:04:00 +0300
+Message: Update documentation, make standalone docs, add theming docs
+
+Class Changes:
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Added:   root = 'p-menubar',
+
+-------------------
+Commit: cb19d3113
+Date: 2024-09-01 01:16:00 +0300
+Message: Code refactor, remove p-element class
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <div [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile-active': mobileActive }" [class]="styleClass" [ngStyle]="style" [attr.data-pc-section]="'root'" [attr.data-pc-name]="'menubar'">
+Added:   [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile-active': mobileActive }"
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar {
+
+Removed: .p-menubar ul {
+
+Removed: .p-menubar .p-menuitem-link {
+
+Removed: .p-menubar .p-menuitem-text {
+
+Removed: .p-menubar .p-menuitem {
+
+Removed: .p-menubar .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Removed: .p-menubar .p-menubar-root-list .p-icon-wrapper {
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-icon-wrapper {
+
+Removed: .p-menubar .p-menubar-custom,
+
+Removed: .p-menubar .p-menubar-end {
+Added:   'p-menubar p-component',
+
+-------------------
+Commit: b91877221
+Date: 2024-07-03 15:51:33 +0300
+Message: remove styles
+
+Class Changes:
+File: /dev/null
+
+Removed: .p-menubar {
+
+Removed: 'p-menubar p-component',
+
+-------------------
+Commit: 196523bbf
+Date: 2024-06-12 17:36:47 +0300
+Message: Fill style folders
+
+Class Changes:
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Added:   .p-menubar {
+
+Added:   'p-menubar p-component',
+
+-------------------
+Commit: 95485a30c
+Date: 2024-05-02 11:39:10 +0300
+Message: Sync primeng-sass-theme
+
+Class Changes:
+File: src/assets/components/themes/arya-blue/theme.css
+
+Removed: .p-menubar .p-menubar-root-list > .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-submenu-icon {
+
+Removed: .p-menubar .p-menuitem.p-highlight > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+
+Removed: .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+
+Removed: .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-submenu-icon {
+
+-------------------
+Commit: 7b6591434
+Date: 2024-04-26 14:32:01 +0300
+Message: updated menubar examples
+
+Class Changes:
+File: src/app/showcase/doc/menubar/basicdoc.ts
+
+Removed: <p-menubar [model]="items"></p-menubar>
+
+Removed: basic: `<p-menubar [model]="items"></p-menubar>`,
+Added:   basic: `<p-menubar [model]="items" />`,
+
+Added:   <p-menubar [model]="items" />`,
+
+Added:   <p-menubar [model]="items">
+
+Added:   </p-menubar>
+
+Added:   basic: `<p-menubar [model]="items">
+
+Added:   </p-menubar>`,
+
+-------------------
+Commit: 081e0abb4
+Date: 2024-04-25 16:14:46 +0300
+Message: updated dock examples
+
+Class Changes:
+File: src/app/showcase/doc/dock/advanceddoc.ts
+
+Added:   .p-menubar {
+
+-------------------
+Commit: bc00d011a
+Date: 2023-11-27 12:02:13 +0300
+Message: Sync code buttons with vue
+
+Class Changes:
+File: src/app/showcase/doc/dock/advanceddoc.ts
+
+Removed: <p-menubar [model]="menubarItems">
+Added:   basic: `<p-menubar [model]="menubarItems">
+
+Removed: <p-menubar [model]="items"></p-menubar>`,
+Added:   basic: `<p-menubar [model]="items"></p-menubar>`,
+
+Removed: <p-menubar [model]="items">
+Added:   basic: `<p-menubar [model]="items">
+
+-------------------
+Commit: 2b5b33361
+Date: 2023-07-05 04:16:40 +0300
+Message: Accessibility | Menubar
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <div [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile-active': mobileActive }" [class]="styleClass" [ngStyle]="style">
+Added:   <div [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile-active': mobileActive }" [class]="styleClass" [ngStyle]="style" [attr.data-pc-section]="'root'" [attr.data-pc-name]="'menubar'">
+
+-------------------
+Commit: 6e3fad5a4
+Date: 2023-04-18 22:54:12 +0300
+Message: add missing margin
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Removed: .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon:not(svg) {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-icon-wrapper {
+
+-------------------
+Commit: f5129d8cc
+Date: 2023-03-16 11:51:52 +0300
+Message: New documentation
+
+Class Changes:
+File: /dev/null
+
+Removed: &lt;p-menubar [model]="menubarItems"&gt;
+
+Removed: &lt;/p-menubar&gt;
+
+Removed: .p-menubar {
+
+Removed: &lt;p-menubar [model]="items"&gt;&lt;/p-menubar&gt;
+
+Removed: <p>Custom content can be placed between p-menubar tags.</p>
+
+Removed: &lt;p-menubar [model]="items"&gt;
+
+Removed: <td>p-menubar</td>
+Added:   <p-menubar [model]="items"></p-menubar>
+
+Added:   <p-menubar [model]="items"></p-menubar>`,
+
+Added:   </p-menubar>`,
+
+-------------------
+Commit: fb5586646
+Date: 2022-11-08 17:19:01 +0300
+Message: Merge master into issue-11902
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Removed: <div [ngClass]="{'p-menubar p-component':true, 'p-menubar-mobile-active': mobileActive}" [class]="styleClass" [ngStyle]="style">
+Added:   <div [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile-active': mobileActive }" [class]="styleClass" [ngStyle]="style">
+
+-------------------
+Commit: 996150b2c
+Date: 2022-10-21 12:02:45 +0100
+Message: Update all files
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Removed: <div [ngClass]="{'p-menubar p-component':true, 'p-menubar-mobile-active': mobileActive}" [class]="styleClass" [ngStyle]="style">
+Added:   <div [ngClass]="{ 'p-menubar p-component': true, 'p-menubar-mobile-active': mobileActive }" [class]="styleClass" [ngStyle]="style">
+
+-------------------
+Commit: 4b857acf9
+Date: 2021-07-30 11:02:34 +0300
+Message: Dock Demo
+
+Class Changes:
+File: src/app/showcase/components/dock/dockdemo.html
+
+Added:   <p-menubar [model]="menubarItems">
+
+Added:   </p-menubar>
+
+Added:   &lt;p-menubar [model]="menubarItems"&gt;
+
+Added:   &lt;/p-menubar&gt;
+
+Added:   .p-menubar {
+
+-------------------
+Commit: 3642a0b89
+Date: 2020-08-14 12:24:14 +0300
+Message: Fixed #9127 - Menubar not working on mobile devices
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Removed: <div [ngClass]="{'p-menubar p-component':true}" [class]="styleClass" [ngStyle]="style">
+Added:   <div [ngClass]="{'p-menubar p-component':true, 'p-menubar-mobile-active': mobileActive}" [class]="styleClass" [ngStyle]="style">
+
+-------------------
+Commit: 045076382
+Date: 2020-08-06 22:41:20 +0300
+Message: #9116 - Unit tests should be pass for MenuBar
+
+Class Changes:
+File: src/app/components/menubar/menubar.spec.ts
+
+Added:   const menuEl = fixture.debugElement.query(By.css('.p-menubar'));
+
+-------------------
+Commit: fcb87e254
+Date: 2020-07-27 14:39:51 +0300
+Message: Menubar demo update
+
+Class Changes:
+File: src/app/showcase/components/menubar/menubardemo.html
+
+Removed: <p-menubar [model]="items">
+
+Removed: </p-menubar>
+Added:   <td>p-menubar</td>
+
+-------------------
+Commit: 196bc45ae
+Date: 2020-07-23 17:10:38 +0300
+Message: Fixed menubar, tieredmenu and contextmenu
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Removed: .p-menubar .p-submenu-list > .p-menuitem-active > .p-submenu-list  {
+Added:   .p-menubar .p-submenu-list > .p-menuitem-active > p-menubarsub > .p-submenu-list  {
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+
+Class Changes:
+File: src/app/components/menubar/menubar.css
+
+Added:   .p-menubar {
+
+Added:   .p-menubar ul {
+
+Added:   .p-menubar .p-menuitem-link {
+
+Added:   .p-menubar .p-menuitem-text {
+
+Added:   .p-menubar .p-menuitem {
+
+Added:   .p-menubar .p-submenu-list {
+
+Added:   .p-menubar .p-submenu-list > .p-menuitem-active > .p-submenu-list  {
+
+Added:   .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+
+Added:   .p-menubar .p-menubar-custom,
+
+Added:   .p-menubar .p-menubar-end {
+
+Added:   <div [ngClass]="{'p-menubar p-component':true}" [class]="styleClass" [ngStyle]="style">
+
+-------------------
+Commit: 94e7c5b3f
+Date: 2019-11-21 17:13:46 +0300
+Message: New PrimeNG Repo with NG9/Ivy Support with build based on ng-packagr  to support Angular Package Format
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Added:   selector: 'p-menubar',
+
+Added:   <p-menubar [model]="items">
+
+Added:   </p-menubar>
+
+Added:   &lt;p-menubar [model]="items"&gt;&lt;/p-menubar&gt;
+
+Added:   <p>Custom content can be placed between p-menubar tags.</p>
+
+Added:   &lt;p-menubar [model]="items"&gt;
+
+Added:   &lt;/p-menubar&gt;
+
+-------------------
+Commit: 1c67bf324
+Date: 2019-11-21 17:11:43 +0300
+Message: Refresh repo
+
+Class Changes:
+File: /dev/null
+
+Removed: selector: 'p-menubar',
+
+Removed: <p-menubar [model]="items">
+
+Removed: </p-menubar>
+
+Removed: &lt;p-menubar [model]="items"&gt;&lt;/p-menubar&gt;
+
+Removed: <p>Custom content can be placed between p-menubar tags.</p>
+
+Removed: &lt;p-menubar [model]="items"&gt;
+
+Removed: &lt;/p-menubar&gt;
+
+-------------------
+Commit: d576749ca
+Date: 2019-10-21 01:21:51 +0300
+Message: MenuBar Behaviour Fixed
+
+Class Changes:
+File: src/app/showcase/components/menubar/menubardemo.html
+
+Removed: <p-menubar [model]="items" [autoDisplay]="false">
+
+Removed: </p-menubar>
+
+Removed: &lt;p-menubar [model]="items" [autoDisplay]="false"&gt;
+
+Removed: &lt;/p-menubar&gt;
+
+-------------------
+Commit: 77e624c28
+Date: 2018-01-11 16:02:22 +0300
+Message: Fixed #2449
+
+Class Changes:
+File: src/app/showcase/components/menubar/menubardemo.html
+
+Added:   <p-menubar [model]="items" [autoDisplay]="false">
+
+Added:   </p-menubar>
+
+Added:   &lt;p-menubar [model]="items" [autoDisplay]="false"&gt;
+
+Added:   &lt;/p-menubar&gt;
+
+-------------------
+Commit: b94ecf6de
+Date: 2017-06-20 14:34:43 +0300
+Message: Docs for menubar custom content
+
+Class Changes:
+File: src/app/showcase/components/menubar/menubardemo.html
+
+Added:   <p>Custom content can be placed between p-menubar tags.</p>
+
+Added:   &lt;p-menubar [model]="items"&gt;
+
+Added:   &lt;/p-menubar&gt;
+
+-------------------
+Commit: ab45e5f3a
+Date: 2017-06-20 14:08:13 +0300
+Message: fixed #1997
+
+Class Changes:
+File: src/app/showcase/components/menubar/menubardemo.html
+
+Removed: <p-menubar [model]="items"></p-menubar>
+Added:   <p-menubar [model]="items">
+
+Added:   </p-menubar>
+
+Removed: &lt;p-menubar [model]="items"&gt;&lt;/p-menubar&gt;
+Added:   &lt;p-menubar [model]="items"&gt;
+
+Added:   &lt;/p-menubar&gt;
+
+-------------------
+Commit: 70983aad3
+Date: 2017-06-02 11:34:53 +0300
+Message: New codebase based on Angular CLI
+
+Class Changes:
+File: src/app/components/menubar/menubar.ts
+
+Added:   selector: 'p-menubar',
+
+Added:   <p-menubar [model]="items"></p-menubar>
+
+Added:   &lt;p-menubar [model]="items"&gt;&lt;/p-menubar&gt;
+
+-------------------
+Commit: 15d7b2601
+Date: 2017-06-02 11:27:24 +0300
+Message: Remove old codebase
+
+Class Changes:
+File: /dev/null
+
+Removed: selector: 'p-menubar',
+
+Removed: <p-menubar [model]="items"></p-menubar>
+
+Removed: &lt;p-menubar [model]="items"&gt;&lt;/p-menubar&gt;
+
+-------------------
+Commit: 1dd4a0348
+Date: 2016-05-13 14:47:11 +0300
+Message: Fixed #352
+
+Class Changes:
+File: showcase/demo/menubar/menubardemo.html
+
+Removed: <p-menubar>
+
+Removed: </p-menubar>
+
+Removed: <p-menubar [autoDisplay]="false">
+Added:   <p-menubar [model]="items"></p-menubar>
+
+Removed: &lt;p-menubar&gt;
+
+Removed: &lt;/p-menubar&gt;
+Added:   &lt;p-menubar [model]="items"&gt;&lt;/p-menubar&gt;
+
+Removed: &lt;p-menubar [autoDisplay]="false"&gt;
+
+-------------------
+Commit: 850d4576f
+Date: 2016-02-15 12:21:59 +0200
+Message: Merged breadcrumb, lightbox, menu, menubar, paginator, slidemenu, slider, tieredmenu from my fork for 0.4
+
+Class Changes:
+File: components/menubar/menubar.ts
+
+Added:   selector: 'p-menubar',
+
+Added:   <p-menubar>
+
+Added:   </p-menubar>
+
+Added:   <p-menubar [autoDisplay]="false">
+
+Added:   &lt;p-menubar&gt;
+
+Added:   &lt;/p-menubar&gt;
+
+Added:   &lt;p-menubar [autoDisplay]="false"&gt;
+

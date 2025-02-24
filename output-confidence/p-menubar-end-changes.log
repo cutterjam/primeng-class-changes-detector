@@ -1,0 +1,263 @@
+PrimeNG Changes for p-menubar-end
+============================
+
+-------------------
+Commit: 73c9530b8
+Date: 2024-12-13 02:53:27 +0300
+Message: Menubar | Fix pTemplate issue
+File: packages/primeng/src/menubar/menubar.ts
+
+Class Changes:
+-            <div class="p-menubar-end" *ngIf="endTemplate; else legacy">
+-                <ng-container *ngTemplateOutlet="endTemplate"></ng-container>
++            <div class="p-menubar-end" *ngIf="endTemplate || _endTemplate; else legacy">
++                <ng-container *ngTemplateOutlet="endTemplate || _endTemplate"></ng-container>
+-export class Menubar extends BaseComponent implements OnDestroy, OnInit {
++export class Menubar extends BaseComponent implements AfterContentInit, OnDestroy, OnInit {
+-    @ContentChild('start') startTemplate: TemplateRef<any> | undefined;
++    @ContentChild('start', { descendants: false }) startTemplate: TemplateRef<any> | undefined;
+
+-------------------
+Commit: cf0703166
+Date: 2024-11-21 11:56:09 +0300
+Message: Fixed #16793 - RTL Support (#16799)
+File: packages/primeng/src/menubar/style/menubarstyle.ts
+
+Class Changes:
++.p-menubar-end:dir(rtl) {
++    margin-left: 0;
++    margin-right: auto;
++}
++
+
+-------------------
+Commit: 1967524bd
+Date: 2024-11-14 17:22:38 +0300
+Message: update dock | basic & advanced doc
+File: /dev/null
+
+Class Changes:
+-                .p-menubar-end {
+-                    span, i {
+-                        padding: 0 .75rem;
+-                    }
+-                }
+-        }
+-
+-        .dark-tooltip {
+-            .p-tooltip {
+-                .p-tooltip-arrow {
+-                    border-top-color: var(--surface-900);
+-        .p-menubar-end {
+-            span, i {
+-        .p-menubar-end {
+-            span, i {
+
+-------------------
+Commit: e4e6219d7
+Date: 2024-11-08 10:30:42 +0000
+Message: init
+File: packages/primeng/src/menubar/style/menubarstyle.ts
+
+Class Changes:
+-    end: 'p-menubar-end',
++    end: 'p-menubar-end'
+-    end = 'p-menubar-end',
++    end = 'p-menubar-end'
+
+-------------------
+Commit: 4481b74a5
+Date: 2024-09-22 21:04:00 +0300
+Message: Update documentation, make standalone docs, add theming docs
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Class Changes:
++    end = 'p-menubar-end',
++}
++
++export interface MenubarStyle extends BaseStyle {}
+
+-------------------
+Commit: de8ddf8b4
+Date: 2024-09-04 00:48:46 +0300
+Message: code format
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Class Changes:
+-    end: 'p-menubar-end'
++    end: 'p-menubar-end',
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Class Changes:
+-    .p-menubar .p-menubar-end {
+-        margin-left: auto;
+-        align-self: center;
+-    }
+-
+-    .p-menubar-button {
+-        display: none;
+-        cursor: pointer;
+-        align-items: center;
+-        justify-content: center;
+-    }
++.p-menubar-end {
++    margin-left: auto;
++    end: 'p-menubar-end'
++};
+
+-------------------
+Commit: b91877221
+Date: 2024-07-03 15:51:33 +0300
+Message: remove styles
+File: /dev/null
+
+Class Changes:
+-.p-menubar-end {
+-    margin-left: auto;
+-    align-self: center;
+-}
+-
+-.p-menubar-button {
+-    display: none;
+-    justify-content: center;
+-    align-items: center;
+-    cursor: pointer;
+-    width: ${dt('menubar.mobile.button.size')};
+-    end: 'p-menubar-end'
+-};
+
+-------------------
+Commit: 196523bbf
+Date: 2024-06-12 17:36:47 +0300
+Message: Fill style folders
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Class Changes:
++.p-menubar-end {
++    margin-left: auto;
++    align-self: center;
++}
++
++.p-menubar-button {
++    display: none;
++    justify-content: center;
++    align-items: center;
++    cursor: pointer;
++    width: ${dt('menubar.mobile.button.size')};
++    end: 'p-menubar-end'
++};
+
+-------------------
+Commit: 081e0abb4
+Date: 2024-04-25 16:14:46 +0300
+Message: updated dock examples
+File: src/app/showcase/doc/dock/advanceddoc.ts
+
+Class Changes:
++                .p-menubar-end {
++                    span, i {
++                        padding: 0 .75rem;
++                    }
++                }
++            }
++        }
++        
++        .dark-tooltip {
++            .p-tooltip {
++                .p-tooltip-arrow {
+
+-------------------
+Commit: 833d4ff08
+Date: 2023-09-25 22:58:44 +0300
+Message: Refactor #13737
+File: src/app/components/menubar/menubar.css
+
+Class Changes:
+-.p-menubar .p-menubar-end {
+-    margin-left: auto;
+-    align-self: center;
+-}
++    .p-menubar .p-menubar-custom,
++    .p-menubar .p-menubar-end {
++        margin-left: auto;
++        align-self: center;
++    }
+
+-------------------
+Commit: f5129d8cc
+Date: 2023-03-16 11:51:52 +0300
+Message: New documentation
+File: src/app/showcase/pages/dock/dockdemo.scss
+
+Class Changes:
+-            .p-menubar-end {
+-                span, i {
+-                    padding: 0 .75rem;
+-                }
+-            }
+-        }
+-    }
+-
+-    .dark-tooltip {
+-        .p-tooltip {
+-            .p-tooltip-arrow {
++        .p-menubar-end {
++            span, i {
++        .p-menubar-end {
++            span, i {
+
+-------------------
+Commit: 4b857acf9
+Date: 2021-07-30 11:02:34 +0300
+Message: Dock Demo
+File: src/app/showcase/components/dock/dockdemo.scss
+
+Class Changes:
++            .p-menubar-end {
++                span, i {
++                    padding: 0 .75rem;
++                }
++            }
++        }
++    }
++
++    .dark-tooltip {
++        .p-tooltip {
++            .p-tooltip-arrow {
+
+-------------------
+Commit: 0d7e0442e
+Date: 2020-07-23 18:17:49 +0300
+Message: Menubar demo update
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
+-            <div class="p-menubar-end">
+-                <ng-content></ng-content>
++            <div class="p-menubar-end" *ngIf="endTemplate; else legacy">
++                <ng-container *ngTemplateOutlet="endTemplate"></ng-container>
++            <ng-template #legacy>
++                <div class="p-menubar-end">
++                    <ng-content></ng-content>
++                </div>
++            </ng-template>
+-export class Menubar {
++export class Menubar implements AfterContentInit {
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
++.p-menubar .p-menubar-end {
++    margin-left: auto;
++    align-self: center;
++            <div class="p-menubar-end">
+

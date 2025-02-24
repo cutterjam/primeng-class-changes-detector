@@ -1,0 +1,4092 @@
+PrimeNG Changes for p-menubar-button
+============================
+
+-------------------
+Commit: 276cd3f1a
+Date: 2024-10-19 20:40:40 +0300
+Message: Add material theme
+File: src/app/components/themes/material/menubar/index.ts
+
+Class Changes:
++.p-menubar-button:focus-visible {
++    background: ${dt('navigation.item.active.background')};
++}
++`
++};
+
+-------------------
+Commit: 4481b74a5
+Date: 2024-09-22 21:04:00 +0300
+Message: Update documentation, make standalone docs, add theming docs
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Class Changes:
++    button = 'p-menubar-button',
++    /**
++     * Class name of the root list element
++     */
++    rootList = 'p-menubar-root-list',
++    /**
++     * Class name of the item element
++     */
++    item = 'p-menubar-item',
++    /**
++     * Class name of the item content element
+
+-------------------
+Commit: af1da2097
+Date: 2024-08-26 15:10:05 +0300
+Message: Remove unused theme.css
+File: /dev/null
+
+Class Changes:
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-      width: 2rem;
+-      height: 2rem;
+-      color: rgba(255, 255, 255, 0.6);
+-      border-radius: 50%;
+-      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+-    }
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-      background: rgba(255, 255, 255, 0.03);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #ffffff;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #334155;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 1px solid var(--p-focus-ring-color);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.7);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.7);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #0078d4;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6b7280;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #81a1c1;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #697077;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #333333;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #333333;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #333333;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #666666;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #708da9;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #71717a;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #898989;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Class Changes:
+-    .p-menubar-button {
+-        display: none;
+-        cursor: pointer;
+-        align-items: center;
+-        justify-content: center;
+-    }
+-}
++import { Injectable } from '@angular/core';
++import { BaseStyle } from 'primeng/base';
++
++const theme = ({ dt }) => `
++.p-menubar-button {
++    display: none;
++.p-menubar-button:hover {
++    color: ${dt('menubar.mobile.button.hover.color')};
++.p-menubar-button:focus-visible {
++    box-shadow: ${dt('menubar.mobile.button.focus.ring.shadow')};
++.p-menubar-mobile .p-menubar-button {
++    display: flex;
++    button: 'p-menubar-button',
++    rootList: 'p-menubar-root-list',
+
+-------------------
+Commit: b91877221
+Date: 2024-07-03 15:51:33 +0300
+Message: remove styles
+File: /dev/null
+
+Class Changes:
+-.p-menubar-button {
+-    display: none;
+-    justify-content: center;
+-    align-items: center;
+-    cursor: pointer;
+-    width: ${dt('menubar.mobile.button.size')};
+-    height: ${dt('menubar.mobile.button.size')};
+-    position: relative;
+-    color: ${dt('menubar.mobile.button.color')};
+-    border: 0 none;
+-    background: transparent;
+-.p-menubar-button:hover {
+-    color: ${dt('menubar.mobile.button.hover.color')};
+-.p-menubar-button:focus-visible {
+-    box-shadow: ${dt('menubar.mobile.button.focus.ring.shadow')};
+-.p-menubar-mobile .p-menubar-button {
+-    display: flex;
+-    button: 'p-menubar-button',
+-    rootList: 'p-menubar-root-list',
+
+-------------------
+Commit: 196523bbf
+Date: 2024-06-12 17:36:47 +0300
+Message: Fill style folders
+File: src/app/components/menubar/style/menubarstyle.ts
+
+Class Changes:
++.p-menubar-button {
++    display: none;
++    justify-content: center;
++    align-items: center;
++    cursor: pointer;
++    width: ${dt('menubar.mobile.button.size')};
++    height: ${dt('menubar.mobile.button.size')};
++    position: relative;
++    color: ${dt('menubar.mobile.button.color')};
++    border: 0 none;
++    background: transparent;
++.p-menubar-button:hover {
++    color: ${dt('menubar.mobile.button.hover.color')};
++.p-menubar-button:focus-visible {
++    box-shadow: ${dt('menubar.mobile.button.focus.ring.shadow')};
++.p-menubar-mobile .p-menubar-button {
++    display: flex;
++    button: 'p-menubar-button',
++    rootList: 'p-menubar-root-list',
+
+-------------------
+Commit: b540cee3a
+Date: 2024-03-21 13:16:24 +0300
+Message: Add missing variable
+File: src/assets/components/themes/mdc-dark-indigo/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 2.5rem;
++      height: 2.5rem;
++      color: rgba(255, 255, 255, 0.6);
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++      background: rgba(255, 255, 255, 0.04);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+
+-------------------
+Commit: aabc89d76
+Date: 2024-03-21 13:15:29 +0300
+Message: sync sass-theme
+File: src/assets/components/themes/mdc-dark-indigo/theme.css
+
+Class Changes:
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-      width: 2.5rem;
+-      height: 2.5rem;
+-      color: rgba(255, 255, 255, 0.6);
+-      border-radius: 50%;
+-      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+-    }
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-      background: rgba(255, 255, 255, 0.04);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+
+-------------------
+Commit: 2e7ab4d3a
+Date: 2024-03-18 16:39:37 +0300
+Message: Add aura
+File: src/assets/components/themes/aura-light-pink/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 1.75rem;
++      height: 1.75rem;
++      color: #71717a;
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, outline-color 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++      background: rgba(255, 255, 255, 0.03);
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
+
+-------------------
+Commit: 9f3fef0bd
+Date: 2024-03-21 12:49:25 +0300
+Message: Sync sass-theme
+File: src/assets/components/themes/aura-light-teal/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 1.75rem;
++      height: 1.75rem;
++      color: #94a3b8;
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, outline-color 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++      background: #f1f5f9;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
+
+-------------------
+Commit: c86b944c4
+Date: 2024-03-21 12:49:12 +0300
+Message: Merge master
+File: src/assets/components/themes/aura-light-purple/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 1.75rem;
++      height: 1.75rem;
++      color: #71717a;
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, outline-color 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++      background: rgba(255, 255, 255, 0.03);
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #ffffff;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #334155;
++    .p-menubar .p-menubar-button:focus {
++      outline: 1px solid var(--p-focus-ring-color);
+
+-------------------
+Commit: bda1ec2d7
+Date: 2023-11-29 19:02:18 +0300
+Message: Merge branch 'master' into prod
+File: src/assets/components/themes/lara-light-pink/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 2rem;
++      height: 2rem;
++      color: rgba(255, 255, 255, 0.6);
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++      background: rgba(255, 255, 255, 0.03);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+
+-------------------
+Commit: 7377b9a40
+Date: 2023-11-27 13:14:14 +0300
+Message: Fixed broken themes
+File: src/assets/components/themes/lara-dark-amber/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 2rem;
++      height: 2rem;
++      color: rgba(255, 255, 255, 0.6);
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++      background: rgba(255, 255, 255, 0.03);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+
+-------------------
+Commit: 39488dce9
+Date: 2023-11-26 14:56:09 +0300
+Message: Add new Lara updates
+File: src/assets/components/themes/lara-light-pink/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 2rem;
++      height: 2rem;
++      color: rgba(255, 255, 255, 0.6);
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++      background: rgba(255, 255, 255, 0.03);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6b7280;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+
+-------------------
+Commit: 9cf766386
+Date: 2023-11-09 13:54:56 +0300
+Message: Calendar | Update styles for accessibility
+File: src/assets/components/themes/lara-light-blue/theme.css
+
+Class Changes:
+-        .p-menubar .p-menubar-button {
+-            display: flex;
+-            width: 2rem;
+-            height: 2rem;
+-            color: #6c757d;
+-            border-radius: 50%;
+-            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+-        }
+-        .p-menubar .p-menubar-button:hover {
+-            color: #6c757d;
+-            background: #e9ecef;
+-        .p-menubar .p-menubar-button:focus {
+-            outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+
+-------------------
+Commit: 93e002269
+Date: 2023-11-09 13:19:11 +0300
+Message: #13990 for Calendar
+File: src/assets/components/themes/lara-light-blue/theme.css
+
+Class Changes:
++        .p-menubar .p-menubar-button {
++            display: flex;
++            width: 2rem;
++            height: 2rem;
++            color: #6c757d;
++            border-radius: 50%;
++            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++        }
++        .p-menubar .p-menubar-button:hover {
++            color: #6c757d;
++            background: #e9ecef;
++        .p-menubar .p-menubar-button:focus {
++            outline: 0 none;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+
+-------------------
+Commit: 0cdb8bdeb
+Date: 2023-10-16 11:43:00 +0300
+Message: MultiSelect | Accessibility Enhancements
+File: src/assets/components/themes/viva-light/theme.css
+
+Class Changes:
+-  .p-menubar .p-menubar-button {
+-    display: flex;
++  .p-datatable .p-sortable-column .p-sortable-column-icon {
++    color: rgba(255, 255, 255, 0.6);
++    margin-left: 0.5rem;
++  }
++  .p-datatable .p-sortable-column .p-sortable-column-badge {
++    border-radius: 50%;
++    height: 1.143rem;
++    min-width: 1.143rem;
++    line-height: 1.143rem;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.7);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.7);
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.7);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.7);
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #0078d4;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button:hover {
++  .p-panelmenu .p-panelmenu-content .p-menuitem.p-highlight > .p-menuitem-content {
+-  .p-menubar .p-menubar-button:focus {
++  .p-panelmenu .p-panelmenu-content .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem.p-highlight.p-focus > .p-menuitem-content {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem.p-highlight.p-focus > .p-menuitem-content {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem.p-highlight.p-focus > .p-menuitem-content {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem.p-highlight.p-focus > .p-menuitem-content {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-menuitem-icon, .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-menuitem-icon, .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-menuitem-icon, .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-menuitem-icon, .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-panelmenu .p-panelmenu-content .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-panelmenu .p-panelmenu-content .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-panelmenu .p-panelmenu-content .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #81A1C1;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #697077;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem.p-highlight > .p-menuitem-content {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #333333;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #666666;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content {
+-  .p-menubar .p-menubar-button:focus {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-column-filter-menu-button:hover {
+-  .p-menubar .p-menubar-button:focus {
++  .p-column-filter-clear-button:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #708da9;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-slidemenu .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link .p-submenu-icon {
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #71717A;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
+-  .p-menubar .p-menubar-button:focus {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:focus-visible,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
+-  .p-menubar .p-menubar-button:focus {
++  .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover .p-menuitem-link .p-menuitem-text {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #898989;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
+
+-------------------
+Commit: 73b950397
+Date: 2023-09-26 14:50:59 +0300
+Message: Sync primeng-sass-theme and refactor on https://github.com/primefaces/primeng/commit/2e19c52bcc8b00bb8023ed8ec346bcc8c0777749
+File: src/assets/components/themes/fluent-light/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 2rem;
++      height: 2rem;
++      color: #0078d4;
++      border-radius: 2px;
++      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: #0078d4;
++      background: #f3f2f1;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+
+-------------------
+Commit: 2e19c52bc
+Date: 2023-09-26 13:14:10 +0300
+Message: Fixed #13306 - Add missing styling and sync primeng-sass-theme
+File: src/assets/components/themes/fluent-light/theme.css
+
+Class Changes:
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-      width: 2rem;
+-      height: 2rem;
+-      color: #0078d4;
+-      border-radius: 2px;
+-      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+-    }
+-    .p-menubar .p-menubar-button:hover {
+-      color: #0078d4;
+-      background: #f3f2f1;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
+
+-------------------
+Commit: 94f96802e
+Date: 2023-09-26 12:23:29 +0300
+Message: Add reverted changes "Theme updates: change :focus to focus-visible" https://github.com/primefaces/primeng/commit/a33e8e7f38f1dc4929027e2853a97951d20b02aa
+File: src/assets/components/themes/viva-light/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 2rem;
++      height: 2rem;
++      color: rgba(255, 255, 255, 0.6);
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++      background: rgba(255, 255, 255, 0.03);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.7);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.7);
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.7);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.7);
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #0078d4;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #0078d4;
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #81A1C1;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #81A1C1;
+-  .p-menubar .p-menubar-button:focus {
++  .p-toast .p-toast-message .p-toast-icon-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #697077;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #333333;
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tieredmenu .p-tieredmenu-root-list {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #666666;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #666666;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #708da9;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #71717A;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #71717A;
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.87);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #898989;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #898989;
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus-visible {
+
+-------------------
+Commit: d3cfab9b2
+Date: 2023-09-26 11:41:05 +0300
+Message: Fixed #13650 - Sync with primeng-sass-theme
+File: src/assets/components/themes/viva-light/theme.css
+
+Class Changes:
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-      width: 2rem;
+-      height: 2rem;
+-      color: rgba(255, 255, 255, 0.6);
+-      border-radius: 50%;
+-      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+-    }
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-      background: rgba(255, 255, 255, 0.03);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.7);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.7);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.7);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.7);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #0078d4;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #0078d4;
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
+-    box-shadow: inset 0 0 0 0.2rem rgba(147, 197, 253, 0.5);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
+-    box-shadow: inset 0 0 0 0.2rem rgba(165, 180, 252, 0.5);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
+-    box-shadow: inset 0 0 0 0.2rem rgba(196, 181, 253, 0.5);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
+-    box-shadow: inset 0 0 0 0.2rem rgba(94, 234, 212, 0.5);
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #dedede;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-toast .p-toast-message.p-toast-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(0, 0, 0, 0.6);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
+-  .p-toast .p-toast-message.p-toast-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #81A1C1;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #81A1C1;
++  .p-menubar .p-menubar-button:focus {
+-  .p-toast .p-toast-message.p-toast-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #697077;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #dde1e6;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #333333;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #333333;
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #333333;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #333333;
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #333333;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #333333;
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #666666;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #666666;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #6c757d;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
+-  .p-steps .p-steps-item.p-highlight .p-steps-number {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #708da9;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    background: #f6f9fc;
++  .p-menubar .p-menubar-button:focus {
+-    box-shadow: inset 0 0 0 1px #c7bbfa;
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #71717A;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #71717A;
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: rgba(255, 255, 255, 0.87);
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+-    .p-menubar .p-menubar-button {
+-      display: flex;
+-    .p-menubar .p-menubar-button:hover {
+-      color: #898989;
+-    .p-menubar .p-menubar-button:focus {
+-      outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #898989;
++  .p-menubar .p-menubar-button:focus {
+-  .p-message.p-message-info {
+
+-------------------
+Commit: 833d4ff08
+Date: 2023-09-25 22:58:44 +0300
+Message: Refactor #13737
+File: src/app/components/menubar/menubar.css
+
+Class Changes:
+-.p-menubar-button {
+-    display: none;
+-    cursor: pointer;
+-    align-items: center;
+-    justify-content: center;
+-}
++    .p-menubar-button {
++        display: none;
++        cursor: pointer;
++        align-items: center;
++        justify-content: center;
+
+-------------------
+Commit: 422b3fe7b
+Date: 2023-09-25 19:32:45 +0300
+Message: Fixed #13737 - New @layer implementation
+File: src/assets/components/themes/viva-light/theme.css
+
+Class Changes:
++    .p-menubar .p-menubar-button {
++      display: flex;
++      width: 2rem;
++      height: 2rem;
++      color: rgba(255, 255, 255, 0.6);
++      border-radius: 50%;
++      transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++    }
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++      background: rgba(255, 255, 255, 0.03);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-datatable .p-datatable-tbody > tr > td .p-row-toggler:enabled:hover,
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.7);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.7);
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.7);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.7);
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #0078d4;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #0078d4;
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link .p-menuitem-icon {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link .p-menuitem-icon {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link .p-menuitem-icon {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link .p-menuitem-icon {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #dedede;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #dedede;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(0, 0, 0, 0.6);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(0, 0, 0, 0.6);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #81A1C1;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #81A1C1;
+-  .p-menubar .p-menubar-button:focus {
++  .p-toast .p-toast-message .p-toast-icon-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #697077;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tieredmenu .p-tieredmenu-root-list {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #333333;
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav-btn.p-link:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #333333;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #666666;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #666666;
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #6c757d;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-steps .p-steps-item .p-menuitem-link .p-steps-title {
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.87);
+-  .p-menubar .p-menubar-button:focus {
++  .p-steps .p-steps-item .p-menuitem-link:not(.p-disabled):focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #708da9;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link:not(.p-disabled):focus {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #71717A;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #71717A;
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link {
+-  .p-menubar .p-menubar-button:focus {
++  .p-tabmenu .p-tabmenu-nav .p-tabmenuitem.p-highlight .p-menuitem-link {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: rgba(255, 255, 255, 0.87);
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: rgba(255, 255, 255, 0.87);
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
++    .p-menubar .p-menubar-button {
++      display: flex;
++    .p-menubar .p-menubar-button:hover {
++      color: #898989;
++    .p-menubar .p-menubar-button:focus {
++      outline: 0 none;
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-  .p-menubar .p-menubar-button:hover {
+-    color: #898989;
+-  .p-menubar .p-menubar-button:focus {
++  .p-message .p-message-close:focus {
+
+-------------------
+Commit: bddeceb83
+Date: 2023-07-26 12:22:24 +0300
+Message: Code format
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
+-               class="p-menubar-button"
+-               (click)="menuButtonClick($event)" 
+-               (keydown)="menuButtonKeydown($event)"
++            <a
++                #menubutton
++                tabindex="0"
++                role="button"
++                [attr.aria-haspopup]="model.length && model.length > 0 ? true : false"
++                [attr.aria-expanded]="mobileActive"
++                [attr.aria-controls]="id"
++                [attr.aria-label]="config.translation.aria.navigation"
++                class="p-menubar-button"
++                (click)="menuButtonClick($event)"
+
+-------------------
+Commit: 2b5b33361
+Date: 2023-07-05 04:16:40 +0300
+Message: Accessibility | Menubar
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
+-            <a #menubutton tabindex="0" *ngIf="model && model.length > 0" class="p-menubar-button" (click)="toggle($event)">
++            <a #menubutton
++               tabindex="0"
++               role="button"
++               [attr.aria-haspopup]="model.length && model.length > 0 ? true : false"
++               [attr.aria-expanded]="mobileActive"
++               [attr.aria-controls]="id"
++               [attr.aria-label]="config.aria.navigation"
++               [attr.data-pc-section]="'button'"
++               *ngIf="model && model.length > 0" 
++               class="p-menubar-button"
++               (click)="menuButtonClick($event)" 
+
+-------------------
+Commit: 1d1c5d0e8
+Date: 2023-01-27 11:30:38 +0300
+Message: Add nano
+File: src/assets/components/themes/nano/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 1rem;
++    height: 1rem;
++    color: #697077;
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #697077;
++    background: #dde1e6;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 7a5429800
+Date: 2023-01-27 11:30:09 +0300
+Message: Add mira
+File: src/assets/components/themes/mira/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: #81A1C1;
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #81A1C1;
++    background: #ffffff;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 2fd964fa3
+Date: 2023-01-27 11:24:46 +0300
+Message: add viva dark
+File: src/assets/components/themes/viva-dark/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: rgba(255, 255, 255, 0.6);
++    border-radius: 50%;
++    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++    background: rgba(158, 173, 230, 0.08);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 034908058
+Date: 2023-01-27 11:24:00 +0300
+Message: Add viva light
+File: src/assets/components/themes/viva-light/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: #898989;
++    border-radius: 50%;
++    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #898989;
++    background: #edf0fA;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 17a83c00d
+Date: 2023-01-27 11:23:44 +0300
+Message: Add soho dark
+File: src/assets/components/themes/soho-dark/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: rgba(255, 255, 255, 0.6);
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: d5bef9a01
+Date: 2023-01-27 11:22:55 +0300
+Message: Add soho light
+File: src/assets/components/themes/soho-light/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: #708da9;
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #708da9;
++    background: #f6f9fc;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 02b694b86
+Date: 2022-11-09 10:08:22 +0300
+Message: Refactor on menubar
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
+-            <a #menubutton tabindex="0" *ngIf="model.length > 0" class="p-menubar-button" (click)="toggle($event)">
++            <a #menubutton tabindex="0" *ngIf="model && model.length > 0" class="p-menubar-button" (click)="toggle($event)">
+
+-------------------
+Commit: fb5586646
+Date: 2022-11-08 17:19:01 +0300
+Message: Merge master into issue-11902
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
+-            <a #menubutton tabindex="0" class="p-menubar-button" (click)="toggle($event)">
++            <a #menubutton tabindex="0" *ngIf="model.length > 0" class="p-menubar-button" (click)="toggle($event)">
+-        'class': 'p-element'
++        class: 'p-element'
+-
+
+-------------------
+Commit: 3384b9f38
+Date: 2022-11-02 17:40:14 +0300
+Message: #12084 Menu icon visible
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
+-            <a #menubutton tabindex="0" class="p-menubar-button" (click)="toggle($event)">
++            <a #menubutton tabindex="0" *ngIf="model.length > 0" class="p-menubar-button" (click)="toggle($event)">
+
+-------------------
+Commit: 4b90d05b3
+Date: 2021-11-15 13:04:02 +0300
+Message: Updated Lara themes
+File: src/assets/components/themes/lara-light-teal/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: rgba(255, 255, 255, 0.6);
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: e125b92c6
+Date: 2021-11-09 15:02:22 +0300
+Message: Fixed #10830 - New Theme Lara 🎨
+File: src/assets/components/themes/lara-light-purple/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: rgba(255, 255, 255, 0.6);
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: ad7d4900e
+Date: 2021-09-17 16:17:57 +0300
+Message: Fixed #10629 Tailwind Theme
+File: src/assets/components/themes/tailwind-light/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: #71717A;
++    border-radius: 50%;
++    transition: none;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #71717A;
++    background: #f4f4f5;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 0ae6df1d6
+Date: 2020-10-07 22:54:28 +0300
+Message: Theme update: Remove fluent dark, cosmetics on config
+File: /dev/null
+
+Class Changes:
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-    width: 2rem;
+-    height: 2rem;
+-    color: #0078d4;
+-    border-radius: 2px;
+-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+-  }
+-  .p-menubar .p-menubar-button:hover {
+-    color: #0078d4;
+-    background: #f3f2f1;
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
+
+-------------------
+Commit: 8767588b5
+Date: 2020-10-07 17:19:17 +0300
+Message: Theme Update: Adds Fluent and soho themes and plain support for outlined buttons
+File: src/assets/components/themes/fluent-light/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: #0078d4;
++    border-radius: 2px;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #0078d4;
++    background: #f3f2f1;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #0078d4;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 3642a0b89
+Date: 2020-08-14 12:24:14 +0300
+Message: Fixed #9127 - Menubar not working on mobile devices
+File: src/app/components/menubar/menubar.ts
+
+Class Changes:
++            <a #menubutton tabindex="0" class="p-menubar-button" (click)="toggle($event)">
++                <i class="pi pi-bars"></i>
++            </a>
++            <p-menubarSub #rootmenu [item]="model" root="root" [baseZIndex]="baseZIndex" (leafClick)="onLeafClick()" [autoZIndex]="autoZIndex" [mobileActive]="mobileActive"></p-menubarSub>
+-export class Menubar implements AfterContentInit {
++export class Menubar implements AfterContentInit, OnDestroy {
+
+-------------------
+Commit: 8c2fd63aa
+Date: 2020-07-21 11:03:46 +0300
+Message: Add new themes
+File: src/assets/components/themes/vela-purple/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: rgba(255, 255, 255, 0.6);
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++    background: rgba(255, 255, 255, 0.03);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.7);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.7);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(0, 0, 0, 0.6);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #333333;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: rgba(255, 255, 255, 0.87);
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: e2c66a6fc
+Date: 2020-07-20 18:26:05 +0300
+Message: Add next-gen themes including bootstrap, material, primeone and legacy
+File: src/assets/components/themes/saga-purple/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: #dedede;
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++    background: #4c4c4c;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #dedede;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #333333;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #333333;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #666666;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
++  .p-menubar .p-menubar-button {
++    display: flex;
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+
+-------------------
+Commit: 6bc112970
+Date: 2020-07-20 18:24:40 +0300
+Message: Removed old gen themes
+File: /dev/null
+
+Class Changes:
+-  .p-menubar .p-menubar-button {
+-    display: flex;
+-    width: 2rem;
+-    height: 2rem;
+-    color: #6c757d;
+-    border-radius: 50%;
+-    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+-  }
+-  .p-menubar .p-menubar-button:hover {
+-    color: #6c757d;
+-    background: #e9ecef;
+-  .p-menubar .p-menubar-button:focus {
+-    outline: 0 none;
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+File: src/app/components/menubar/menubar.css
+
+Class Changes:
++.p-menubar-button {
++    display: none;
++    cursor: pointer;
++    align-items: center;
++    justify-content: center;
+
+-------------------
+Commit: d898efc59
+Date: 2020-07-16 10:02:56 +0300
+Message: New saga theme
+File: src/assets/components/themes/saga-blue/theme.css
+
+Class Changes:
++  .p-menubar .p-menubar-button {
++    display: flex;
++    width: 2rem;
++    height: 2rem;
++    color: #6c757d;
++    border-radius: 50%;
++    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
++  }
++  .p-menubar .p-menubar-button:hover {
++    color: #6c757d;
++    background: #e9ecef;
++  .p-menubar .p-menubar-button:focus {
++    outline: 0 none;
+

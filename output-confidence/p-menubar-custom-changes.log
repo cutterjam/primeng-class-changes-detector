@@ -1,0 +1,52 @@
+PrimeNG Changes for p-menubar-custom
+============================
+
+-------------------
+Commit: c953a33c1
+Date: 2024-07-22 14:12:31 +0300
+Message: Theming | Menubar
+File: /dev/null
+
+Class Changes:
+-    .p-menubar .p-menubar-custom,
+-    .p-menubar .p-menubar-end {
+-        margin-left: auto;
+-        align-self: center;
+-    }
+-
+-    .p-menubar-button {
+-        display: none;
+-        cursor: pointer;
+-        align-items: center;
+-        justify-content: center;
+
+-------------------
+Commit: 833d4ff08
+Date: 2023-09-25 22:58:44 +0300
+Message: Refactor #13737
+File: src/app/components/menubar/menubar.css
+
+Class Changes:
+-.p-menubar .p-menubar-custom,
+-.p-menubar .p-menubar-end {
+-    margin-left: auto;
+-    align-self: center;
+-}
++    .p-menubar .p-menubar-custom,
++    .p-menubar .p-menubar-end {
++        margin-left: auto;
++        align-self: center;
++    }
+
+-------------------
+Commit: c5f3d87e3
+Date: 2020-07-16 13:56:07 +0300
+Message: Migrated menus to primeone
+File: src/app/components/menubar/menubar.css
+
+Class Changes:
++.p-menubar .p-menubar-custom,
++.p-menubar .p-menubar-end {
++    margin-left: auto;
++    align-self: center;
+

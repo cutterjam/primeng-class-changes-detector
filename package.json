@@ -5,18 +5,18 @@
   "main": "ai_script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "track-ai": "sudo node scripts/track_changes_ai.js /Users/I6105/Documents/GitHub/primeng --use-ai",
+    "track-ai": "sudo node scripts/track_changes_ai.js /Users/cutternaismith/Documents/GitHub/primeng --use-ai",
     "pre-gen-log": "sudo node scripts/pre_gen_log.js --log-file /path/to/logfile.log",
-    "track": "node scripts/track_changes.js /Users/I6105/Documents/GitHub/primeng"
+    "track": "node scripts/track_changes.js /Users/cutternaismith/Documents/GitHub/primeng"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/I6105/primeng-class-changes-detector.git"
+    "url": "git+https://github.com/cutternaismith/primeng-class-changes-detector.git"
   },
-  "author": "I6105",
+  "author": "cutternaismith",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/I6105/primeng-class-changes-detector/issues"
+    "url": "https://github.com/cutternaismith/primeng-class-changes-detector/issues"
   },
   "dependencies": {
     "axios": "^1.7.9",
